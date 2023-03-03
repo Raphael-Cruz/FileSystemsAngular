@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ModalComponent } from './modal/modal.component';
-import { NewModalComponent } from './new-modal/new-modal.component';
+
 import { ReactiveFormsModule } from '@angular/forms';
+import { AlertComponent } from './alert/alert.component';
 
 
 
@@ -13,7 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     ModalComponent,
-    NewModalComponent,
+
+    AlertComponent,
 
 
     
@@ -24,7 +26,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   exports: [
     ModalComponent,
-    NewModalComponent
+ 
+    AlertComponent
     
   ],
 

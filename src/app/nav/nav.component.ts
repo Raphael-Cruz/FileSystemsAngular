@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalService } from '../services/modal.service';
 
+
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -8,7 +9,13 @@ import { ModalService } from '../services/modal.service';
 })
 export class NavComponent implements OnInit {
 
-  constructor(public modal: ModalService) { }
+
+
+  constructor(
+    public modal: ModalService
+    
+    ) {
+     }
 
   ngOnInit(): void {
   }
@@ -17,14 +24,9 @@ export class NavComponent implements OnInit {
     $event.preventDefault()
 
     this.modal.toggleModal('auth')
-    
-  }
-
-  openModalTest($event: Event) {
-    $event.preventDefault()
-
-    this.modal.toggleModal('test')
+    console.log('clicou')
   }
 
 }
+
 

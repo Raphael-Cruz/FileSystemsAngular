@@ -9,9 +9,6 @@ visible: boolean;
   providedIn: 'root'
 })
 
-
-
-
 export class ModalService {
 
   private modals: IModal[] = []
@@ -27,6 +24,10 @@ export class ModalService {
       
    }
 
+   unregister(id: string){
+    this.modals = this.modals .filter(element => element.id !== id)
+   }
+   
    isModalOpen(id: string) : boolean {
     return !!this.modals.find(element => element.id === id)?.visible
   }
@@ -39,10 +40,5 @@ export class ModalService {
     }
   
   }
-
-
-
-
-  
 
   }

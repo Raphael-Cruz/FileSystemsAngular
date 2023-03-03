@@ -1,6 +1,11 @@
 
+<app-alert *ngIf="showAlert" [color]="alertColor">
+  {{ alertMsg }}
+</app-alert>
+
+
  <!-- Login Form -->
- <form #loginForm="ngForm" (ngSubmit)="login()">
+ <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
     <!-- Email -->
     <div class="mb-3">
       <label class="inline-block mb-2">Email</label >
@@ -15,6 +20,25 @@
         />
 
         <p *ngIf="email.errors && email.touched && email.dirty" class="text-red-400">
+            Voce precisa digitar um email valido.
+        </p>
+    </div>
+    <!--Login-->
+    
+    <div class="mb-3">
+      <label class="inline-block mb-2">Login</label >
+      <input #login="ngModel"
+      type="name" name="login" [(ngModel)]="credentials.login" 
+        class="block w-full py-1.5 px-3 text-gray-200 border border-gray-400 transition
+          duration-500 focus:outline-none rounded bg-transparent
+          focus:border-indigo-400"
+        placeholder="Digite seu Login"
+        required
+        minlength="3"
+       
+        />
+
+        <p *ngIf="login.errors && login.touched && login.dirty" class="text-red-400">
             Voce precisa digitar um email valido.
         </p>
     </div>
@@ -34,9 +58,9 @@
             A senha precisa ter pelo menos 8 letras, contendo: 1 letra maiuscula, 1 letra minucula e 1 numero.
         </p>
     </div>
-    <button type="submit"
+    <button [disabled]="loginForm.invalid || inSubmission"
       class="block w-full  bg-indigo-400 text-white py-1.5 px-3 rounded transition
-        hover:bg-indigo-500 p-8">
+      hover:bg-indigo-500 disabled:opacity-50 disabled:bg-indigo-400">
       Logar
     </button>
   </form>
