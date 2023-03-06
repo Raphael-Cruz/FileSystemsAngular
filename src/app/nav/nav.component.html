@@ -11,20 +11,24 @@
         <!-- Primary Navigation -->
         <ul class="flex flex-row mt-1">
           <!-- Navigation Links -->
-          <li>
+          <li *ngIf="!(log.isLogged); else authLinks" >
             <a class="px-2" href="#" 
-            (click)="openModal($event)">
-            Login / Register
-          </a>
+              (click)="openModal($event)">
+              Login / Register
+            </a>
           </li>
+          <ng-template #authLinks >
+            <li>
+              <a class="px-2" href="#">Manage</a>
+            </li>
+            <li>
+              <a class="px-2" href="#">Upload</a>
+            </li>
+           
+          </ng-template>
           <li>
-            <a class="px-2" href="#">Planos</a>
+            <a class="px-2" href="about.html">About</a>
           </li>
-          <li>
-            <a class="px-2" href="#">Contato</a>
-          </li>
-          
-          
         </ul>
         <!-- Language Switcher -->
         <ul class="flex flex-row ml-auto">

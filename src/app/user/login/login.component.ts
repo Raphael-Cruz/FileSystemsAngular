@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {HttpClient} from "@angular/common/http"
+import { Component, OnInit, Input } from '@angular/core';
+import {AngularFireAuth} from "@angular/fire/compat/auth"
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,11 @@ import {HttpClient} from "@angular/common/http"
   styleUrls: ['./login.component.css']
 })
 
+
 export class LoginComponent implements OnInit{
 
-  
+ 
+
   alertMsg = 'Estamos te conectando ao sistema!'
   alertColor = 'blue'
   showAlert = false
@@ -17,8 +20,11 @@ export class LoginComponent implements OnInit{
   
 
 
-  //constructor(){}
-  constructor(private http: HttpClient){}
+ constructor(
+  private auth: AngularFireAuth,
+  public log: AuthService
+  ){}
+
   credentials = {
     email: '',
     login:'',
@@ -31,30 +37,30 @@ export class LoginComponent implements OnInit{
 
 async onSubmit() {
 
+    
+    this.showAlert = true
+    this.alertMsg = 'Please wait! We are loggin you in'
+    this.alertColor = 'blue'
+    this.inSubmission = true
+    this.log.isLogged = true
+    
 
-
-  await (
-    this.http.post('', this.credentials),
-   
-  
-   console.log(this.credentials)
-  )
-  
   try{
 
-    this.showAlert = true
-    this.alertMsg = 'Estamos te conectando ao sistema!'
-    this.alertColor = 'blue'
+    await this.auth.signInWithEmailAndPassword(
+      this.credentials.email, this.credentials.password
+    )
     
   } catch(e){
-    
-  this.showAlert = true
-  this.alertMsg = 'Um erro aconteceu, tente novamente mais tarde!'
-  this.alertColor = 'red'
-  }
+   
+  this.alertMsg = "An unexpected error ocurred. Please try again later!"
+  this.alertColor = 'red' 
+  this.inSubmission = false
+  console.log(e)
 
-  this.showAlert = true
-  this.alertMsg = 'Sucesso!!!!!!!! Voce esta logado no sistema!'
-  this.alertColor = 'green'
+  return
+  }
+  this.alertMsg = 'Sucess! Your are logged in'
+  this.alertColor = 'green' 
 }
 }

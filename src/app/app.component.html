@@ -141,7 +141,7 @@
       </div>
 
     </a>
-    <app-auth-modal></app-auth-modal>
+
   </div>
 </section>
 
@@ -256,7 +256,8 @@
       </div>
 
     </a>
-    <app-auth-modal></app-auth-modal>
+ 
   </div>
 </section>
 
+<app-auth-modal *ngIf="!(auth.isLogged)"></app-auth-modal>

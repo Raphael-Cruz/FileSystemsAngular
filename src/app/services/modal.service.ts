@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable} from '@angular/core';
+
 
 interface IModal{
 id: string,
@@ -12,6 +13,8 @@ visible: boolean;
 export class ModalService {
 
   private modals: IModal[] = []
+  
+
 
   constructor() {
    }

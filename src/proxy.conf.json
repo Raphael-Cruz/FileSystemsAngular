@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "https://clips-4c174-default-rtdb.firebaseio.com/",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
