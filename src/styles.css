@@ -6,7 +6,8 @@
 
 
 body {
-    background-color: #184e77;
+    background-color: #0077b6;
+    
   }
   
   .material-icons.text-base {
@@ -15,12 +16,15 @@ body {
   
   .bg-secondary {
     background-color: #283046;
+    
+  
   }
   
   .bg-gradient {
     background: linear-gradient(132deg, #3a0ca3, #4361ee, #4cc9f0);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
+
   }
   
   .cube {
