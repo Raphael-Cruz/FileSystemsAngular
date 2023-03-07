@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit{
 
  constructor(
   private auth: AngularFireAuth,
-  public log: AuthService
+  public loggin: AuthService
   ){}
 
   credentials = {
@@ -42,7 +42,7 @@ async onSubmit() {
     this.alertMsg = 'Please wait! We are loggin you in'
     this.alertColor = 'blue'
     this.inSubmission = true
-    this.log.isLogged = true
+
     
 
   try{
@@ -50,6 +50,7 @@ async onSubmit() {
     await this.auth.signInWithEmailAndPassword(
       this.credentials.email, this.credentials.password
     )
+
     
   } catch(e){
    
@@ -62,5 +63,9 @@ async onSubmit() {
   }
   this.alertMsg = 'Sucess! Your are logged in'
   this.alertColor = 'green' 
+  setTimeout(() => {
+    this.loggin.isLogged = true
+  }, 
+  1000);
 }
 }
