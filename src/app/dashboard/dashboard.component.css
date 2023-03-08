@@ -1,0 +1,13 @@
+.bg-sidebar {
+    background: linear-gradient(#87bfff, #add7f6);
+    
+ }
+
+ .mainComponent {
+    background: linear-gradient(90deg,#edf2fb, #abc4ff);
+ }
+
+ .navBg{
+    background: linear-gradient(90deg,#edf2fb, #abc4ff);
+     
+ }

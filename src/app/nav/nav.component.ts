@@ -15,8 +15,7 @@ export class NavComponent implements OnInit {
   constructor(
     public modal: ModalService,
     public log: AuthService
-    ) {
-     }
+    ) {     }
 
   ngOnInit(): void {
   }

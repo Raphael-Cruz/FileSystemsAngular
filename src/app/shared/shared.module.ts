@@ -4,6 +4,8 @@ import { ModalComponent } from './modal/modal.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { AlertComponent } from './alert/alert.component';
+import { InputComponent } from './input/input.component';
+import { DashboardComponent } from '../dashboard/dashboard.component';
 
 
 
@@ -14,8 +16,9 @@ import { AlertComponent } from './alert/alert.component';
 @NgModule({
   declarations: [
     ModalComponent,
-
+   
     AlertComponent,
+     InputComponent,
 
 
     
@@ -26,8 +29,10 @@ import { AlertComponent } from './alert/alert.component';
   ],
   exports: [
     ModalComponent,
- 
-    AlertComponent
+    InputComponent,
+    AlertComponent,
+    
+
     
   ],
 

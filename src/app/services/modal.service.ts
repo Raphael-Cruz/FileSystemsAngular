@@ -6,6 +6,7 @@ id: string,
 visible: boolean; 
 }
 
+  
 @Injectable({
   providedIn: 'root'
 })
@@ -16,6 +17,7 @@ export class ModalService {
   
 
 
+
   constructor() {
    }
 
@@ -24,8 +26,8 @@ export class ModalService {
       id,
       visible: false
     })
-      
-   }
+  }
+
 
    unregister(id: string){
     this.modals = this.modals .filter(element => element.id !== id)
@@ -43,5 +45,5 @@ export class ModalService {
     }
   
   }
-
   }
+  
