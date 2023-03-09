@@ -9,17 +9,16 @@ import {AngularFireModule} from '@angular/fire/compat';
 import { environment } from 'src/environment/environment';
 import {AngularFireAuthModule} from '@angular/fire/compat/auth';
 import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
-import { DashboardComponent } from './dashboard/dashboard.component';
+
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-   
-   
-    
-    
+
   ],
   imports: [
     BrowserModule,
@@ -28,7 +27,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule
-    
     
   ],
   providers: [],

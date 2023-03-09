@@ -9,7 +9,6 @@ import { RegisterClientComponent } from './register.client/register.client.compo
 import { DashboardComponent } from '../dashboard/dashboard.component';
 
 
-
 @NgModule({
   declarations: [
     
@@ -28,8 +27,7 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
     AuthModalComponent,
     LoginComponent,
     RegisterClientComponent,
-    DashboardComponent
- 
+    DashboardComponent,
   ]
 })
 export class UserModule { }
