@@ -1,6 +1,6 @@
-<div class=" fixed w-2/6 h-screen overflow-x-hidden flex flex-col">
-    
 
+
+<ng-content ></ng-content>
   <!-- Registration Form -->
   <form [formGroup]="registerForm" (ngSubmit)="register()">
     <!-- NOME -->
@@ -50,6 +50,5 @@
       [disabled]="registerForm.invalid">
       Submit
     </button>
+    
   </form>
-
-</div>

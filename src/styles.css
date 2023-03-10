@@ -3,20 +3,21 @@
 @tailwind components;
 @tailwind utilities;
 
-
     @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
     .font-family-karla { font-family: karla; }
    
-    .cta-btn { color: #3d68ff; }
-    .upgrade-btn { background: #1947ee; }
-    .upgrade-btn:hover { background: #0038fd; }
+    .cta-btn { color: #2d6a4f; }
+    .upgrade-btn { background: #2d6a4f; }
+    .upgrade-btn:hover { background: #2d6a4f; }
     
-    .active-nav-link { background: #3b88df; }
-    .nav-item:hover { background: #3b88df; }
-    .account-link:hover { background: #3d68ff; }
-
+    
     /* ------------------------------------------------------------------------------ */
-    
+    .navBg{
+      background: linear-gradient(90deg,#2d6a4f, #D8F3DC);
+      
+      
+   }
+  
 .sub-menu {
   display: none;
   background-color: #fff;
@@ -29,12 +30,39 @@
     
 
     /* ---------------------------------------- ----------------------------------------------------*/
-body {
-    background-color: #27aeeb;
-    text-color: black;
-
-    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
   }
+  
+  body {
+      position: relative;
+      font-family: 'Roboto', sans-serif;
+      text-color: black;
+  }
+  
+  .card {
+      display: flex;
+      flex-direction: column;
+      border-radius: .5rem;
+      background-color: #edf2f4;
+      margin: 1.25rem 0 1.25rem 0;
+      box-shadow: 0 .25rem .5rem #e6edef;
+  
+      
+  
+      
+  }
+  .card-head {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #edf1f7;
+    font-size: 1rem;
+    font-weight: 600;
+}
+  .card-body {
+    padding: 1rem 1.5rem; 
+}
   
   .material-icons.text-base {
     font-size: inherit;

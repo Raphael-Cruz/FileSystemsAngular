@@ -5,7 +5,7 @@ import { ModalComponent } from './modal/modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AlertComponent } from './alert/alert.component';
 import { InputComponent } from './input/input.component';
-
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -14,8 +14,7 @@ import { InputComponent } from './input/input.component';
 @NgModule({
   declarations: [
     ModalComponent,
-   
-    AlertComponent,
+      AlertComponent,
      InputComponent,
 
 
@@ -23,13 +22,15 @@ import { InputComponent } from './input/input.component';
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   exports: [
     ModalComponent,
     InputComponent,
     AlertComponent,
-    CommonModule
+    CommonModule,
+    AppRoutingModule
     
 
     

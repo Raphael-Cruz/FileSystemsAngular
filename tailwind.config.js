@@ -8,8 +8,18 @@ module.exports = {
               'bg-green-400', 
               'bg-red-400',
             ],
-  theme: {
+  theme: { 
+    colors: {
+      gray: {
+        200: "#000814"
+      },
+    },
     extend: {},
   },
-  plugins: [],
+  plugins: [{
+    'postcss-import': {},
+    'tailwindcss/nesting': 'postcss-nesting',
+    tailwindcss: {},
+    autoprefixer: {},
+  }]
 }

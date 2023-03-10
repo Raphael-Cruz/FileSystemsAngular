@@ -7,7 +7,8 @@ import { AuthModalComponent } from './auth-modal/auth-modal.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterClientComponent } from './register.client/register.client.component';
 import { DashboardComponent } from '../dashboard/dashboard.component';
-
+import { FooterComponent } from '../footer/footer.component';
+import { DashHeaderComponent } from '../dash-header/dash-header.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
     AuthModalComponent,
          LoginComponent,
          RegisterClientComponent,
-         DashboardComponent
+         DashboardComponent,
+         FooterComponent,
+         DashHeaderComponent
   ],
   imports: [
     CommonModule,
@@ -28,6 +31,9 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
     LoginComponent,
     RegisterClientComponent,
     DashboardComponent,
+    FooterComponent,
+    DashHeaderComponent
+ 
   ]
 })
 export class UserModule { }

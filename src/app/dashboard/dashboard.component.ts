@@ -1,6 +1,7 @@
 
 import { Component, Output, EventEmitter, OnInit, HostListener } from '@angular/core';
-
+import { navbarData } from './nav-data';
+import { NgOptimizedImage } from '@angular/common'
 
 interface SideNavToggle {
   screenWidth: number;
@@ -21,14 +22,17 @@ export class DashboardComponent implements OnInit {
 
   @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
  
+
+
+  dropMenu: boolean = false;
   screenWidth = 0;
+
+
 
   mobileView = false;
   collapsed = false;
-  isOpen: boolean = false;
-  dropMenu: boolean = false;
   isActive: boolean = false;
-
+  navData = navbarData;
   
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
@@ -47,26 +51,18 @@ export class DashboardComponent implements OnInit {
     this.screenWidth = window.innerWidth;
 }
 
+OpenMobileNav($event?: Event){
+  $event?.preventDefault()
+  this.collapsed = !this.collapsed
+  console.log("mobile menu")
+}
+toggleMenu() {
+  this.dropMenu = !this.dropMenu;
+  this.isActive = !this.isActive;
+}
 
-  toggleMenu() {
-    this.dropMenu = !this.dropMenu;
-    this.isActive = !this.isActive;
-  }
 
-  openBtn($event?: Event ) {
-    $event?.preventDefault()
-    this.isOpen = !this.isOpen;
-  }
 
-  closeBtn() {
-    this.isOpen = false;
-  }
-
-  OpenMobileNav($event?: Event){
-    $event?.preventDefault()
-    this.collapsed = !this.collapsed
-    console.log("mobile menu")
-  }
 }
 
 

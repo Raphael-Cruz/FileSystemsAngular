@@ -1,0 +1,55 @@
+
+
+
+<div class="navBg w-5/6 h-20 relative flex flex-col border-2 border-white items-center  ">
+
+  
+    <div class=" w-full items-center py-2 px-6 hidden sm:flex" >
+        <div class="w-1/2" >
+            <ul class="flex flex-row mt-1 text-black  text-lg">
+                <p class="block px-4 py-2 account-link text-white" >Usuario Logado:</p>
+                
+            </ul>
+        </div>
+    
+            <div class="relative w-1/2 flex justify-end" >
+            
+                    <!-- User Button-->
+                    
+                <div  (click)="openBtn($event)" class="relative flex flex-col z-40 w-12 h-12 cursor-pointer rounded-full overflow-hidden border-4 border-gray-400 hover:border-gray-300 focus:border-gray-300  focus:outline-none" id="userBtn"
+                id="userbtn">
+                <img src="https://source.unsplash.com/uJ8LNVCBjFQ/400x400">
+        
+                </div>
+                    <!-- account drop menu-->
+                <div *ngIf="isOpen" class="absolute w-32 bg-white rounded-lg shadow-lg py-2 mt-16 ">
+                        <a href="#" class="block px-4 py-2 account-link hover:text-white" >Dados do Usuario</a>
+                        <a href="#" class="block px-4 py-2 account-link hover:text-white">Trocar de Usuario</a>
+                        <a href="#" class="block px-4 py-2 account-link hover:text-white">Encerrar Sessao</a>
+                </div>
+            </div>
+            
+    </div>
+    
+   
+ 
+  
+</div>
+
+  <!-- Background overlay-->
+
+<div class="navBg w-5/6 flex flex-col h-screen bg-indigo-400 inset-0 transition-opacity items-center"
+(click)="closeBtn()">
+
+    <div class="card w-3/6 p-2 z-40 ">
+        <div class="card-head text-center" >Casdastro de Clientes</div>
+        <div class="flex flex-col card-body">
+
+            <app-register></app-register>
+
+        </div>
+    </div>
+         
+ 
+
+</div>

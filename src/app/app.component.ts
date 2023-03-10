@@ -1,6 +1,11 @@
 import { Component} from '@angular/core';
 import { AuthService } from './services/auth.service';
 
+interface SideNavToggle {
+  screenWidth: number;
+  collapsed: boolean;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app2.component.html',
@@ -10,9 +15,19 @@ export class AppComponent {
   title = 'Masterproject';
 
 
+  isSideNavCollapsed = false;
+  screenWidth = 0;
 
  
- constructor (public auth: AuthService){
+ constructor (public auth: AuthService){ }
+
+
+  onToggleSideNav(data: SideNavToggle): void {
+    this.screenWidth = data.screenWidth;
+    this.isSideNavCollapsed = data.collapsed;
+  }
  
- }
+
+
+
 }
