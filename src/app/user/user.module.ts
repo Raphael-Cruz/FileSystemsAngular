@@ -10,6 +10,7 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 import { FooterComponent } from '../footer/footer.component';
 import { DashHeaderComponent } from '../dash-header/dash-header.component';
 
+
 @NgModule({
   declarations: [
     
@@ -18,7 +19,7 @@ import { DashHeaderComponent } from '../dash-header/dash-header.component';
          RegisterClientComponent,
          DashboardComponent,
          FooterComponent,
-         DashHeaderComponent
+         DashHeaderComponent       
   ],
   imports: [
     CommonModule,
@@ -33,7 +34,6 @@ import { DashHeaderComponent } from '../dash-header/dash-header.component';
     DashboardComponent,
     FooterComponent,
     DashHeaderComponent
- 
   ]
 })
 export class UserModule { }

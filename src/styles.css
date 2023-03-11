@@ -10,13 +10,31 @@
     .upgrade-btn { background: #2d6a4f; }
     .upgrade-btn:hover { background: #2d6a4f; }
     
+    .bg-sidebar {
+      background: linear-gradient(#52b69a, #99d98c);
+      
+   }
+  
+   .mainComponent {
+      background: linear-gradient(90deg,#edf2fb, #abc4ff);
+   }
+
+   .active-sublevel {
+    color: #f3f3f3 !important;
     
+}
+
     /* ------------------------------------------------------------------------------ */
     .navBg{
-      background: linear-gradient(90deg,#2d6a4f, #D8F3DC);
+      background: linear-gradient(to bottom,#ced4da, #adb5bd);
       
       
    }
+   .dashMain{
+    background: linear-gradient(to right,#ced4da, #adb5bd);
+    
+    
+ }
   
 .sub-menu {
   display: none;

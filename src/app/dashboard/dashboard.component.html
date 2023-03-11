@@ -1,6 +1,6 @@
 <div class="flex flex-col">
     
-    <aside  class=" bg-sidebar h-screen w-64 hidden sm:block shadow-xl border-2 border-red-500">
+    <aside  class=" bg-sidebar h-screen w-64 hidden sm:block shadow-xl border-2 border-white">
       
         <div class="logo-container">
             
@@ -13,22 +13,35 @@
         </div>
 
         <nav  class="text-white text-base font-semibold pt-3 " >
-           <!-- <a href="index.html" class="flex items-center text-white opacity-75 hover:opacity-100 py-4 pl-6 nav-item ">
-                <i class="fas fa-tachometer-alt mr-3"></i>
-                Dashboard
-            </a>-->
-            <li class="sidenav-nav-item p-2" *ngFor="let data of navData">
-                <a class="sidenav-nav-link " [routerLink]="[data.routeLink]" 
-                routerLinkActive="active"
-                [routerLinkActiveOptions]="{exact: true}"
-                >
-                <i class="sidenav-link-icon" [class]="data.icon"></i>
-                <span class="text-white  bold" @fadeInOut >
-                    {{data.label}}
-                </span>
-                </a>
-            </li>
+            <ul class="sidenav-nav">
+                <li class="sidenav-nav-item" *ngFor="let data of navData">
+                    <a class="sidenav-nav-link" (click)="handleClick(data)"
+                         
+                
 
+                        >
+                        <i class="sidenav-link-icon" [class]="data.icon"></i>
+                            <span class="sidenav-link-text" @fadeInOut *ngIf="expanded"
+                            [ngClass]="getActiveClass(data)">
+                                {{data.label}}
+                            </span>
+                        <i *ngIf="data.expanded" class="menu-collapse-icon"
+                            [ngClass]="!data.expanded ? 'fal fa-angle-down' : 'fal fa-angle-right'"
+                        ></i>
+                    </a>
+        
+                   
+                    <div *ngIf="collapsed && data.items && data.items.length &gt; 0" >
+                        <app-dashboard
+                            [data]="data"
+                            [collapsed]="collapsed"
+                            [multiple]="multiple"
+                            [expanded]="data.expanded"
+                        ></app-dashboard>
+                    </div>
+                </li>
+            </ul>
+            
         </nav> 
 
         

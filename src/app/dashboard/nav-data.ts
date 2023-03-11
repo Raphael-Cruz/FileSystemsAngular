@@ -1,27 +1,69 @@
-export const navbarData = [
+import { INavbarData } from "../models/helper";
+
+export const navbarData: INavbarData[] = [
     {
         routeLink: 'dashboard',
         icon: 'fal fa-home',
-        label: 'Dashboard'
+        label: 'Inicio',
+        expanded: false,
+       
+        
     },
     {
-        routeLink: 'products',
-        icon: 'fal fa-address-card',
-        label: 'Clientes'
+        routeLink: 'clientes',
+        icon: 'fal fa-box-open',
+        label: 'Clientes',
+        expanded: true,
+        multiple: true,
+        items: [
+            {
+                routeLink: 'register/cadastro',
+                icon: 'fal fa-box-open',
+                label: 'Cadastrar Clientes',
+                
+               
+            },
+            {
+                routeLink: 'register/cadastro',
+                icon: 'fal fa-box-open',
+                label: 'Consultar Clientes',
+                
+            }
+        ]
     },
     {
-        routeLink: 'statistics',
+        routeLink: 'vendas',
         icon: 'fal fa-chart-bar',
-        label: 'Vendas'
+        label: 'Statistics',
+       
     },
     {
-        routeLink: 'coupens',
-        icon: 'fal fa-money-bill',
-        label: 'Financeiro'
+        routeLink: 'financeiro',
+        icon: 'fal fa-tags',
+        label: 'Coupens',
+        expanded: true,
+        multiple: true,
+        items: [
+            {
+                routeLink: 'register',
+                label: 'List Coupens',
+                icon: 'fal fa-tags'
+                
+            },
+            {
+                routeLink: 'register',
+                label: 'Create Coupens',
+                icon: 'fal fa-tags'
+                
+            }
+        ]
     },
     {
-        routeLink: 'pages',
-        icon: 'fal fa-cash-register',
-        label: 'Caixa'
-    },
+        routeLink: 'caixa',
+        icon: 'fal fa-file',
+        label: 'Pages',
+       
+    }
+   
+   
 ];
