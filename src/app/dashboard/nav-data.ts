@@ -5,7 +5,7 @@ export const navbarData: INavbarData[] = [
         routeLink: 'dashboard',
         icon: 'fal fa-home',
         label: 'Inicio',
-        expanded: false,
+       
        
         
     },
@@ -13,19 +13,18 @@ export const navbarData: INavbarData[] = [
         routeLink: 'clientes',
         icon: 'fal fa-box-open',
         label: 'Clientes',
-        expanded: true,
-        multiple: true,
+        
         items: [
             {
-                routeLink: 'register/cadastro',
-                icon: 'fal fa-box-open',
+                routeLink: 'clientes/consulta',
+               
                 label: 'Cadastrar Clientes',
                 
                
             },
             {
-                routeLink: 'register/cadastro',
-                icon: 'fal fa-box-open',
+                routeLink: 'clientes/cadastro',
+              
                 label: 'Consultar Clientes',
                 
             }
@@ -34,25 +33,25 @@ export const navbarData: INavbarData[] = [
     {
         routeLink: 'vendas',
         icon: 'fal fa-chart-bar',
-        label: 'Statistics',
+        label: 'Vendas'
+       
        
     },
     {
         routeLink: 'financeiro',
         icon: 'fal fa-tags',
-        label: 'Coupens',
-        expanded: true,
-        multiple: true,
+        label: 'Financeiro',
+       
         items: [
             {
-                routeLink: 'register',
-                label: 'List Coupens',
+                routeLink: 'financeiro/consulta',
+                label: 'Imprimir Relatorio',
                 icon: 'fal fa-tags'
                 
             },
             {
-                routeLink: 'register',
-                label: 'Create Coupens',
+                routeLink: 'financeiro/cadastro',
+                label: 'Criar Relatorio',
                 icon: 'fal fa-tags'
                 
             }
@@ -61,7 +60,7 @@ export const navbarData: INavbarData[] = [
     {
         routeLink: 'caixa',
         icon: 'fal fa-file',
-        label: 'Pages',
+        label: 'Caixa',
        
     }
    

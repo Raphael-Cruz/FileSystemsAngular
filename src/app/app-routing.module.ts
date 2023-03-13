@@ -10,9 +10,10 @@ const routes: Routes = [
 {path: 'dashboard', component: DashboardComponent},
 {path: 'clientes', component: RegisterClientComponent},
 {path: 'vendas', component: DashboardComponent},
-{path: 'financeiro', component: RegisterClientComponent},
+{path: 'financeiro', component: DashboardComponent},
 {path: 'caixa', component: RegisterClientComponent}
 ]
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

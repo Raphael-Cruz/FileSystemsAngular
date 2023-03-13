@@ -1,52 +1,70 @@
+
+
 <div class="flex flex-col">
     
-    <aside  class=" bg-sidebar h-screen w-64 hidden sm:block shadow-xl border-2 border-white">
+    
+    <aside  class=" bg-sidebar h-screen w-64 hidden sm:block shadow-xl border-2 border-white" *ngIf="data.items" [ngClass]="{'submenu': true, 'active': data.expanded}">
       
-        <div class="logo-container">
-            
-            
-            
-            <a href="index.html" class="logo-container flex">
+        <div class="logo-template">
+            <a href="index.html" class="logo-template flex">
                 <img  src="assets/img/logo.jpg" class="logo" > 
             </a>
-            
         </div>
 
         <nav  class="text-white text-base font-semibold pt-3 " >
+       
             <ul class="sidenav-nav">
                 <li class="sidenav-nav-item" *ngFor="let data of navData">
-                    <a class="sidenav-nav-link" (click)="handleClick(data)"
-                         
-                
-
-                        >
-                        <i class="sidenav-link-icon" [class]="data.icon"></i>
-                            <span class="sidenav-link-text" @fadeInOut *ngIf="expanded"
-                            [ngClass]="getActiveClass(data)">
-                                {{data.label}}
-                            </span>
-                        <i *ngIf="data.expanded" class="menu-collapse-icon"
-                            [ngClass]="!data.expanded ? 'fal fa-angle-down' : 'fal fa-angle-right'"
-                        ></i>
+                    <a *ngIf="collapsed;" class="sidenav-nav-link" [routerLink]="[data.routeLink]" 
+                        routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}">
+                        <i class="sidenav-link-icon" [class]="data.icon" ></i>
+                        <span class="sidenav-link-text" *ngIf="collapsed" >
+                            {{data.label}}
+                        </span>
+            
+                        <!-- checks if the array includes "items", which is the submenu links-->
+                        <i *ngIf="data.items && collapsed" class="menu-collapse-icon p-5"
+                        [ngClass]="!data.expanded ? 'fal fa-angle-right' : 'fal fa-angle-down'"
+                        (click)="handleClick(data)"></i>
                     </a>
-        
-                   
-                    <div *ngIf="collapsed && data.items && data.items.length &gt; 0" >
-                        <app-dashboard
-                            [data]="data"
-                            [collapsed]="collapsed"
-                            [multiple]="multiple"
-                            [expanded]="data.expanded"
-                        ></app-dashboard>
-                    </div>
+
+                    <a  *ngIf="data.items && data.multiple" class="sublevel-nav-link">
+                        <ng-container *ngFor="let item of data.items" class="sublevel-nav-item">
+
+                            <a class="sublevel-nav-link"
+                            (click)="handleClick(item)"
+                              *ngIf="item.items && item.items.length &gt; 0"
+                              [ngClass]="getActiveClass(item)"
+                            >
+                              <i class="sublevel-link-icon fa fa-circle"></i>
+                              <span class="sublevel-link-text"  
+                                  *ngIf="collapsed">{{item.label}}</span>
+
+                              <i *ngIf="item.items && collapsed" class="menu-collapse-icon"
+                                [ngClass]="!item.expanded ? 'fal fa-angle-right' : 'fal fa-angle-down'"
+                              ></i>
+                            </a>
+                            
+                            <a class="sublevel-nav-link" *ngIf="!item.items"
+                              [routerLink]="[item.routeLink]"
+                              routerLinkActive="active-sublevel"
+                              [routerLinkActiveOptions]="{exact: true} "
+                            >
+                              <i class="sublevel-link-icon fa fa-circle"></i>
+                              <span class="sublevel-link-text" 
+                                 >{{item.label}}</span>
+                            </a>
+                        
+                             
+                        </ng-container>
+                    </a>
+
                 </li>
             </ul>
-            
+
+                  
         </nav> 
-
-        
-
-   
     </aside>
     
     <div *ngIf="mobileView" class="w-full bg-secondary py-5 px-6 sm:hidden">

@@ -11,11 +11,12 @@ import { AppRoutingModule } from '../app-routing.module';
 
 
 
+
 @NgModule({
   declarations: [
     ModalComponent,
       AlertComponent,
-     InputComponent,
+     InputComponent
 
 
     

@@ -15,7 +15,7 @@ export class AppComponent {
   title = 'Masterproject';
 
 
-  isSideNavCollapsed = false;
+  isSideNavCollapsed = true;
   screenWidth = 0;
 
  

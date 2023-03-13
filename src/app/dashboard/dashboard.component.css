@@ -96,3 +96,85 @@
     font-size: 1rem;
     font-weight: 600;
 }
+
+
+.sidenav-collapsed {
+    width: 16.5625rem;
+}
+
+
+
+.active-sublevel {
+    color: #f3f3f3 !important;
+
+}
+
+.menu-collapse-icon {
+    font-size: 25px;
+    width: 2rem;
+    min-width: 2rem;
+    margin: auto 0.5rem auto auto;
+    text-align: center;
+    color: #f3f3f3;
+}
+
+.sublevel-nav {
+    list-style: none;
+    margin-left: 10px;
+
+}
+.sublevel-link-text {
+    margin-left: 0.8rem;
+}
+.sublevel-nav-link:hover {
+    color: #f3f3f3;
+}
+
+.sublevel-link-icon {
+    font-size: 4px;
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 0.5rem;
+    text-align: center;
+}
+//scrollbar and visibility on hover and focus
+
+.scrollwrap {
+    overflow-y: auto;
+    visibility: hidden;
+    height: calc(100% - 3.65rem);
+}
+
+.sidenav-nav,
+.scrollwrap:hover,
+.scrollwrap:focus {
+    visibility: visible;
+}
+
+.scrollwrap_delayed {
+    transition: visibility 0.5s 0.2s;
+}
+
+.scrollwrap_delayed:hover {
+    transition: visibility 0.2s 0.2s;
+}
+
+// works on chrome, edge and safari
+.scrollwrap::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scrollwrap::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollwrap::-webkit-scrollbar-thumb {
+    background-color: #556268;
+    border-radius: 20px;
+}
+
+// works on firefox
+.scrollwrap {
+    scrollbar-width: thin;
+    scrollbar-color: #556268 transparent;
+}

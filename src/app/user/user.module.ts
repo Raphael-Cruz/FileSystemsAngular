@@ -11,6 +11,7 @@ import { FooterComponent } from '../footer/footer.component';
 import { DashHeaderComponent } from '../dash-header/dash-header.component';
 
 
+
 @NgModule({
   declarations: [
     
@@ -19,7 +20,7 @@ import { DashHeaderComponent } from '../dash-header/dash-header.component';
          RegisterClientComponent,
          DashboardComponent,
          FooterComponent,
-         DashHeaderComponent       
+         DashHeaderComponent
   ],
   imports: [
     CommonModule,
