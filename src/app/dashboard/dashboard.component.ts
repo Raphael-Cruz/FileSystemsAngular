@@ -1,8 +1,6 @@
-
-import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, Output, EventEmitter, OnInit, HostListener, Input} from '@angular/core';
 import { navbarData } from './nav-data';
-import { fadeInOut, INavbarData } from '../models/helper';
+import {INavbarData } from '../models/helper';
 
 import { Router } from '@angular/router';
 
@@ -25,8 +23,8 @@ export class DashboardComponent implements OnInit {
 
   @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
   
-  @Input() multiple: boolean = false;
-  @Input() animating: boolean | undefined;
+multiple = false;
+
   @Input() expanded: boolean | undefined;
   @Input() collapsed: boolean = false
 
@@ -40,12 +38,11 @@ export class DashboardComponent implements OnInit {
 
   dropMenu: boolean = false;
   screenWidth = 0;
+  navData = navbarData;
+
+ 
   mobileView = false;
   isActive: boolean = false;
-  navData = navbarData;
-  arrocha: boolean = false;
- 
-
   
 
   constructor(
@@ -73,6 +70,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.screenWidth = window.innerWidth;
     this.toggleCollapse()
+   
     
 }
 
@@ -86,27 +84,34 @@ toggleMenu() {
   this.isActive = !this.isActive;
 }
 
+
+
 handleClick(item: any): void {
-  
-
-
   item.expanded = !item.expanded;
-  item.multiple = !item.multiple;
+  this.navData.forEach(data => {
+    if (data !== item) {
+      data.expanded = false;
+    }
+  });
+  
+}
 
-  console.log("expanded",  item.expanded)
-  console.log("multiple",  item.expanded)
-  this.getActiveClass(item)
-  
-  }
-  
-  getActiveClass(item: INavbarData): string {
-    console.log("active class")
-    return item.expanded && this.router.url.includes(item.routeLink) 
-      ? 'active-sublevel'
-      : '';
-  
-  }
+handleSubMenuClick(item: any): void {
+  item.expanded = !item.expanded;
+  this.navData.forEach(data => {
+    if (data.items) {
+      data.items.forEach(subItem => {
+        if (subItem !== item) {
+          subItem.expanded = false;
+        }
+      });
+    }
+  });
+}
 
+
+
+ 
 toggleCollapse(): void {
   this.collapsed = !this.collapsed;
 
@@ -114,8 +119,22 @@ toggleCollapse(): void {
 }
 
 
+shrinkItems(item: INavbarData): void {
+  if (this.multiple) {
+    for(let modelItem of this.navData) {
+      if (item !== modelItem && modelItem.expanded) {
+        modelItem.expanded =  !modelItem.expanded;
+        this.multiple = !this.multiple;
+        console.log("after click expanded:",  item.expanded)
+      }
+    }
+  }
+}
 
 }
+
+
+
 
 
 

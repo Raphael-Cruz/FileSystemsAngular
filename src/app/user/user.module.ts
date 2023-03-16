@@ -9,8 +9,9 @@ import { RegisterClientComponent } from './register.client/register.client.compo
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { FooterComponent } from '../footer/footer.component';
 import { DashHeaderComponent } from '../dash-header/dash-header.component';
-
-
+import { ConsultaClientesComponent } from './consulta-clientes/consulta-clientes.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ModalComponent } from '../shared/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,16 @@ import { DashHeaderComponent } from '../dash-header/dash-header.component';
          RegisterClientComponent,
          DashboardComponent,
          FooterComponent,
-         DashHeaderComponent
+         DashHeaderComponent,
+         ConsultaClientesComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule
+
   ],
   exports: [
     AuthModalComponent,
@@ -34,7 +38,9 @@ import { DashHeaderComponent } from '../dash-header/dash-header.component';
     RegisterClientComponent,
     DashboardComponent,
     FooterComponent,
-    DashHeaderComponent
+    DashHeaderComponent,
+    ConsultaClientesComponent,
+    ModalComponent
   ]
 })
 export class UserModule { }

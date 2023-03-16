@@ -42,19 +42,12 @@
   border: 1px solid #ccc;
 }
     
-    .sub-menu[hidden="false"] {
-      display: block;
-    }
+.sub-menu[hidden="false"] {
+  display: block;
+}
     
-
-    /* ---------------------------------------- ----------------------------------------------------*/
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-  }
   
-  body {
+body {
       position: relative;
       font-family: 'Roboto', sans-serif;
       text-color: black;
@@ -67,11 +60,20 @@
       background-color: #edf2f4;
       margin: 1.25rem 0 1.25rem 0;
       box-shadow: 0 .25rem .5rem #e6edef;
-  
-      
-  
-      
+        
   }
+
+  .card2 {
+    display: flex;
+    flex-direction: row;
+    
+    border-radius: .5rem;
+    background-color: #edf2f4;
+    margin: 1.25rem 0 1.25rem 0;
+    box-shadow: 0 .25rem .5rem #e6edef;
+      
+}
+
   .card-head {
     padding: 1rem 1.5rem;
     border-bottom: 1px solid #edf1f7;

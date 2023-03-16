@@ -1,3 +1,5 @@
+
+
 export default interface IClient {
     nome: string,
     cpfCnpj: string,
@@ -5,7 +7,10 @@ export default interface IClient {
     referencia: string,
     bairro: string,
     uf: string,
-    telefone: string
-    
+    telefone: string,
+    icon?: string 
+   
 }
+
+
 

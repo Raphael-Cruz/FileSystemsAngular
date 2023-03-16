@@ -1,69 +1,50 @@
 
-
 <div class="flex flex-col">
     
     
     <aside  class=" bg-sidebar h-screen w-64 hidden sm:block shadow-xl border-2 border-white" *ngIf="data.items" [ngClass]="{'submenu': true, 'active': data.expanded}">
-      
         <div class="logo-template">
             <a href="index.html" class="logo-template flex">
                 <img  src="assets/img/logo.jpg" class="logo" > 
             </a>
         </div>
-
         <nav  class="text-white text-base font-semibold pt-3 " >
-       
-            <ul class="sidenav-nav">
-                <li class="sidenav-nav-item" *ngFor="let data of navData">
-                    <a *ngIf="collapsed;" class="sidenav-nav-link" [routerLink]="[data.routeLink]" 
-                        routerLinkActive="active"
-                        [routerLinkActiveOptions]="{exact: true}">
-                        <i class="sidenav-link-icon" [class]="data.icon" ></i>
-                        <span class="sidenav-link-text" *ngIf="collapsed" >
+            <ul class="sidenav-nav ">
+                <li class="sidenav-nav-item " *ngFor="let data of navData">
+                    <a (click)="handleClick(data)" *ngIf="collapsed;" class="sidenav-nav-link"  [routerLink]="[data.routeLink]" 
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact: true}" >
+                        <i class="sidenav-link-icon " [class]="data.icon" ></i>
+                        <span class="sidenav-link-text " *ngIf="collapsed" >
                             {{data.label}}
                         </span>
-            
-                        <!-- checks if the array includes "items", which is the submenu links-->
-                        <i *ngIf="data.items && collapsed" class="menu-collapse-icon p-5"
+                        <i *ngIf="data.items && collapsed" class="menu-collapse-icon  ml-5"
                         [ngClass]="!data.expanded ? 'fal fa-angle-right' : 'fal fa-angle-down'"
-                        (click)="handleClick(data)"></i>
+                        ></i>
                     </a>
-
-                    <a  *ngIf="data.items && data.multiple" class="sublevel-nav-link">
+                    <a *ngIf="data.expanded">
                         <ng-container *ngFor="let item of data.items" class="sublevel-nav-item">
-
-                            <a class="sublevel-nav-link"
-                            (click)="handleClick(item)"
-                              *ngIf="item.items && item.items.length &gt; 0"
-                              [ngClass]="getActiveClass(item)"
-                            >
-                              <i class="sublevel-link-icon fa fa-circle"></i>
-                              <span class="sublevel-link-text"  
-                                  *ngIf="collapsed">{{item.label}}</span>
-
-                              <i *ngIf="item.items && collapsed" class="menu-collapse-icon"
-                                [ngClass]="!item.expanded ? 'fal fa-angle-right' : 'fal fa-angle-down'"
-                              ></i>
+                            <a (click)="handleSubMenuClick(item)" class="sidenav-nav-link pl-3 ml-10 mt-2 " [ngClass]="{'active-sublevel': item.expanded}">
+                                <span class="sublevel-link-text">
+                                    {{item.label}}
+                                </span>
+                                <i  class="menu-collapse-icon  ml-5"
+                                    [ngClass]="item.expanded ? 'fal fa-angle-down' : 'fal fa-angle-right'"
+                                ></i>
                             </a>
-                            
-                            <a class="sublevel-nav-link" *ngIf="!item.items"
-                              [routerLink]="[item.routeLink]"
-                              routerLinkActive="active-sublevel"
-                              [routerLinkActiveOptions]="{exact: true} "
-                            >
-                              <i class="sublevel-link-icon fa fa-circle"></i>
-                              <span class="sublevel-link-text" 
-                                 >{{item.label}}</span>
+                            <a *ngIf="item.expanded && item.items && item.items.length > 0" class="sublevel-nav-item">
+                                <ng-container *ngFor="let subItem of item.items"> 
+                                    <a  class="sidenav-nav-link pl-7 ml-10 mt-2" [routerLink]="[subItem.routeLink]" routerLinkActive="active">
+                                        <span class="sublevel-link-text">
+                                            {{subItem.label}}
+                                        </span>
+                                    </a>
+                                </ng-container>
                             </a>
-                        
-                             
                         </ng-container>
                     </a>
-
                 </li>
             </ul>
-
-                  
         </nav> 
     </aside>
     

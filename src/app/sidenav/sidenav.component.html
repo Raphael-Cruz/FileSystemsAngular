@@ -1,9 +1,49 @@
 <app-dashboard>
 
-   
  
 </app-dashboard>
+<app-dash-header></app-dash-header>
+<div class=" flex flex-col w-3/6 border-4 border-white">
+    <app-register></app-register>
+
+<app-consulta-clientes >
+            
+                       
+                    
+    <app-modal modalID="edit">
+       
+        
+        <table class="text-left  border-collapse " >
+            <thead>
+                <tr class="card-head">
+                   
+                    <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">Nome</th>
+                    <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">Logradouro</th>
+                    <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">Bairro</th>
+                    <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">Telefone</th>
+                    <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">Entidade</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="hover:bg-grey-lighter" *ngFor="let client of client">
+                  <td class="py-4 px-6 border-b border-grey-light">{{ client?.nome }}</td>
+                  <td class="py-4 px-6 border-b border-grey-light">{{ client?.logradouro }}</td>
+                  <td class="py-4 px-6 border-b border-grey-light">{{ client?.bairro }}</td>
+                  <td class="py-4 px-6 border-b border-r border-grey-light">{{ client?.telefone }}</td>
+                  <span class="py-6 border-b text-xl flex flex-col items-center cursor-pointer bg-red-500"></span>
+                </tr>
+              </tbody>
+        </table>
+    
+    </app-modal>
+
+</app-consulta-clientes>  
 
 
+  
+</div>
 
-
+       
+  
+  

@@ -20,12 +20,14 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     BodyComponent,
-    SidenavComponent,
+    SidenavComponent
+ 
   ],
   imports: [
     BrowserModule,

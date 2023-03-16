@@ -1,54 +1,61 @@
-
+<div >
 
 <ng-content ></ng-content>
+
   <!-- Registration Form -->
-  <form [formGroup]="registerForm" (ngSubmit)="register()">
-    <!-- NOME -->
-    <div class="mb-3">
-      <label class="inline-block mb-2 ">Nome</label>
-      <app-input [control]="nome" placeholder="Digite o Nome"></app-input>
+  <form [formGroup]="registerForm" (ngSubmit)="register()" class="card2 items-center">
+    <div class="card w-full p-10"> 
+          <!-- NOME -->
+          <div class="mb-3">
+            <label class="inline-block mb-2 ">Nome</label>
+            <app-input [control]="nome" placeholder="Digite o Nome"></app-input>
+          </div>
+          <!-- CPF -->
+          <div class="mb-3">
+            <label class="inline-block mb-2">CPF/CNPF</label>
+            <app-input [control]="cpf" type="number"
+              placeholder="Digite o CPF/CNPK"></app-input>
+          </div>
+          <!-- RUA -->
+          <div class="mb-3">
+            <label class="inline-block mb-2">Logradouro</label>
+            <app-input [control]="logradouro" type="name"
+              placeholder="Digite o Logradouro"></app-input>
+          </div>
+          <!-- REFERENCIA -->
+          <div class="mb-3">
+            <label class="inline-block mb-2">Referencia</label>
+            <app-input [control]="referencia" type="name"
+              placeholder="Digite a Referencia"></app-input>
+          </div>
+  
     </div>
-    <!-- CPF -->
-    <div class="mb-3">
-      <label class="inline-block mb-2">CPF/CNPF</label>
-      <app-input [control]="cpf" type="email"
-        placeholder="Digite o CPF/CNPK"></app-input>
-    </div>
-    <!-- RUA -->
-    <div class="mb-3">
-      <label class="inline-block mb-2">Logradouro</label>
-      <app-input [control]="logradouro" type="number"
-        placeholder="Digite o Logradouro"></app-input>
-    </div>
-    <!-- REFERENCIA -->
-    <div class="mb-3">
-      <label class="inline-block mb-2">Referencia</label>
-      <app-input [control]="referencia" type="password"
-        placeholder="Digite a Referencia"></app-input>
-    </div>
-    <!-- BAIRRO -->
-    <div class="mb-3">
-      <label class="inline-block mb-2">Bairro</label>
-      <app-input [control]="bairro" type='password'
-        placeholder="Digite o bairro"></app-input>
-    </div>
-    <!-- ESTADO -->
-    <div class="mb-3">
-      <label class="inline-block mb-2">UF</label>
-      <app-input [control]="uf" format="(000)000-0000"
-        placeholder="Digite o UF"></app-input>
-    </div>
-     <!-- TELEFONE -->
-    <div class="mb-3">
-        <label class="inline-block mb-2">Telefone</label>
-        <app-input [control]="telefone" format="(000)000-0000"
-          placeholder="Digite o telefone"></app-input>
-      </div>
-    <button type="submit"
-      class="block w-full bg-indigo-400 text-white py-1.5 px-3 rounded transition
-        hover:bg-indigo-500 disabled:opacity-50 disabled:bg-indigo-400"
-      [disabled]="registerForm.invalid">
-      Submit
-    </button>
     
+    <div class="card w-full p-10">
+        <!-- BAIRRO -->
+        <div class="mb-3">
+          <label class="inline-block mb-2">Bairro</label>
+          <app-input [control]="bairro" type='name'
+            placeholder="Digite o bairro"></app-input>
+        </div>
+        <!-- ESTADO -->
+        <div class="mb-3">
+          <label class="inline-block mb-2">UF</label>
+          <app-input [control]="uf" type='name'
+            placeholder="Digite o Estado"></app-input>
+        </div>
+        <!-- TELEFONE -->
+        <div class="mb-3">
+            <label class="inline-block mb-2">Telefone</label>
+            <app-input [control]="telefone" format="(000)000-0000"
+              placeholder="Digite o telefone"></app-input>
+          </div>
+        <button type="submit"
+          class="block w-full bg-indigo-400 text-white py-1.5 px-3 rounded transition
+            hover:bg-indigo-500 disabled:opacity-50 disabled:bg-indigo-400"
+          [disabled]="registerForm.invalid">
+          Submit
+        </button>
+  </div>
   </form>
+</div>
