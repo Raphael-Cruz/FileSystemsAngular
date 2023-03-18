@@ -12,6 +12,9 @@ import { DashHeaderComponent } from '../dash-header/dash-header.component';
 import { ConsultaClientesComponent } from './consulta-clientes/consulta-clientes.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { ModalComponent } from '../shared/modal/modal.component';
+import { CaixaComponent } from './caixa/caixa.component';
+import { EntidadeComponent } from './caixa/entidade/entidade.component';
+import { SaidaComponent } from './caixa/saida/saida.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { ModalComponent } from '../shared/modal/modal.component';
          DashboardComponent,
          FooterComponent,
          DashHeaderComponent,
-         ConsultaClientesComponent
+         ConsultaClientesComponent,
+         CaixaComponent,
+         EntidadeComponent,
+         SaidaComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +46,10 @@ import { ModalComponent } from '../shared/modal/modal.component';
     FooterComponent,
     DashHeaderComponent,
     ConsultaClientesComponent,
-    ModalComponent
+    ModalComponent,
+    CaixaComponent,
+    EntidadeComponent,
+    SaidaComponent
   ]
 })
 export class UserModule { }

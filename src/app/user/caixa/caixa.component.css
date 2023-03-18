@@ -1,0 +1,28 @@
+.caixaDiv2 {
+    position: relative;
+    display: flex;
+    item-align: center;
+    text-align: center;
+    margin: auto;
+    justify-content: space-between;
+    
+}
+
+.caixaButton{
+color: gray;
+}
+
+th, tr{
+    border: 1px solid;
+    padding: 10px
+
+  }
+
+  .caixaDiv3 {
+    position: relative;
+    item-align: center;
+    text-align: center;
+    margin: auto;
+    justify-content: space-between;
+    
+}
