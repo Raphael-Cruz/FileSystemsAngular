@@ -15,6 +15,8 @@ import { ModalComponent } from '../shared/modal/modal.component';
 import { CaixaComponent } from './caixa/caixa.component';
 import { EntidadeComponent } from './caixa/entidade/entidade.component';
 import { SaidaComponent } from './caixa/saida/saida.component';
+import { RelatorioComponent } from './caixa/relatorio/por periodo/relatorio.component';
+import { RelatorioDiaComponent } from './caixa/relatorio/por dia/relatorio-dia.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { SaidaComponent } from './caixa/saida/saida.component';
          ConsultaClientesComponent,
          CaixaComponent,
          EntidadeComponent,
-         SaidaComponent
+         SaidaComponent,
+         RelatorioComponent,
+         RelatorioDiaComponent
   ],
   imports: [
     CommonModule,
@@ -49,7 +53,9 @@ import { SaidaComponent } from './caixa/saida/saida.component';
     ModalComponent,
     CaixaComponent,
     EntidadeComponent,
-    SaidaComponent
+    SaidaComponent,
+    RelatorioComponent,
+    RelatorioDiaComponent
   ]
 })
 export class UserModule { }
