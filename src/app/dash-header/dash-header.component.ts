@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef} from "@angular/core";
+import { createPopper } from "@popperjs/core";
+
 
 @Component({
   selector: 'app-dash-header',
@@ -6,22 +8,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./dash-header.component.css']
 })
 
-
 export class DashHeaderComponent {
-
-  isOpen: boolean = false;
   
+  @ViewChild("btnDropdownRef", { static: false }) btnDropdownRef!: ElementRef<HTMLElement>;
+  @ViewChild("popoverDropdownRef", { static: false }) popoverDropdownRef!: ElementRef<HTMLElement>;
+  dropdownPopoverShow = false;
+  
+  isOpen: boolean = false;
 
 
+  ngAfterViewInit() {
+    createPopper(
+      this.btnDropdownRef.nativeElement,
+      this.popoverDropdownRef.nativeElement,
+      {
+        placement: "bottom-end",
+      }
+    );
+  }
 
 
+  
   closeBtn() {
     this.isOpen = false;
   }
-
-  
- 
-
   openBtn($event?: Event ) {
     $event?.preventDefault()
     this.isOpen = !this.isOpen;
@@ -30,3 +40,5 @@ export class DashHeaderComponent {
   
   
 }
+
+

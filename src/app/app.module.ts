@@ -10,7 +10,7 @@ import { environment } from 'src/environment/environment';
 import {AngularFireAuthModule} from '@angular/fire/compat/auth';
 import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
 import { BodyComponent } from './body/body.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -27,7 +27,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     AppComponent,
     NavComponent,
     BodyComponent,
-    SidenavComponent
+    HomeComponent
  
   ],
   imports: [
