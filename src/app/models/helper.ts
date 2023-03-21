@@ -32,3 +32,18 @@ export interface ICaixaSaida {
     descricao: string;
     
 }
+
+
+export interface IVendas {
+    codigo: number;
+    descricao: string;
+    
+}
+
+export interface IListaPreco {
+    codigo: number;
+    descricao: string;
+    unidade: string;
+    preco: number;
+    
+}

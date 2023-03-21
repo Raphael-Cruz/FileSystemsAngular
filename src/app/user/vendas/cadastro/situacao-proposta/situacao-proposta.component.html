@@ -1,0 +1,52 @@
+<main  class="card  w-full ">
+    
+    <div class="relative mx-auto text-center mt-10">
+        
+        <table>
+            <h2 class="uppercase p-10 text-center font-semibold">Cadastro Situação Proposta
+            </h2>
+            <tr class="flex text-center mx-auto">
+                <td >Descrição :
+                    <input class="border-2 border-gray-400" type="text" placeholder=""> 
+                </td>
+            </tr>
+        </table>
+    <div class="relative mx-auto text-center mt-20">
+        <table>
+            <thead  class="relative " >
+                <tr class="p-2 border border-solid text-md uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">
+                    <th>
+                    Codigo
+                    </th>
+                    
+                    <th>
+                        Descrição
+                    </th>
+                </tr>  
+            </thead>
+            <tbody>
+                <tr class="text-center items-center " *ngFor="let data of situacao">
+                    <td
+                        class="px-10 align-middle"
+                    >
+                        {{data.codigo}}
+                    </td>
+                    <td
+                    class="px-10 align-middle  "
+                    >
+                    {{data.descricao}}
+                    </td>
+                        
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> 
+
+    <div class="button text-center pt-10" >
+        
+        <button class="caixaButton bg-gray-300 p-2 font-bold rounded-lg " > Cadastrar </button>
+        
+    </div> 
+  
+    </main>

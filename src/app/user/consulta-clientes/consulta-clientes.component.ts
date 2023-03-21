@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ModalService } from 'src/app/services/modal.service';
 import { AuthService } from 'src/app/services/auth.service';
 import IClient from 'src/app/models/clients.model';

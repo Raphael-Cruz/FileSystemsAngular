@@ -1,0 +1,59 @@
+<main  class="card  w-full ">
+    
+    <div class="relative mx-auto text-center mt-10">
+        
+        <table>
+            <h2 class="uppercase p-10 text-center font-semibold">Cadastro de Forma de Pagamento
+
+            </h2>
+            <tr class="flex text-center mx-auto">
+                <td >Descrição :
+                    <input class="border-2 border-gray-400 rounded" type="text" placeholder=""> 
+                </td>
+            </tr>
+        </table>
+        <div class="serchBox mt-20 mr-5">
+            <input class="border-2 border-gray-400 text-center rounded" type="text" name="serach" [(ngModel)]="searchText" placeholder="Pesquisar">
+           
+          </div>
+    <div class="relative mx-auto text-center mt-5">
+        <table>
+            <thead  class="relative " >
+                <tr class="p-2 border border-solid text-md uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">
+                    <th>
+                    Codigo
+                    </th>
+                    
+                    <th>
+                        Descrição
+                    </th>
+                </tr>  
+            </thead>
+            
+            <tbody>
+               
+                <tr class="text-center items-center " *ngFor="let data of formaPagamento | filter:searchText">
+                    <td
+                        class="px-10 align-middle"
+                    >
+                        {{data.codigo}}
+                    </td>
+                    <td
+                    class="px-10 align-middle  "
+                    >
+                    {{data.descricao}}
+                    </td>
+                        
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> 
+
+    <div class="button text-center pt-10" >
+        
+        <button class="caixaButton bg-gray-300 p-2 font-bold rounded-lg " > Cadastrar </button>
+        
+    </div> 
+  
+    </main>
