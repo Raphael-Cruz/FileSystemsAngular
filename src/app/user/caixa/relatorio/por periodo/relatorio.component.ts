@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-
+import { Component } from '@angular/core';
+import { caixaDataEntrada, caixaDataSaida } from '../../caixa-data';
 @Component({
   selector: 'app-relatorio',
   templateUrl: './relatorio.component.html',
@@ -7,13 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class RelatorioComponent {
 
-  @Input()
-  get color(): string {
-    return this._color;
-  }
-  set color(color: string) {
-    this._color = color !== "light" && color !== "dark" ? "light" : color;
-  }
-  private _color = "light";
+//RELATORIO POR PERIODO
 
+
+  dataEntrada = caixaDataEntrada;
+  dataSaida = caixaDataSaida;
 }

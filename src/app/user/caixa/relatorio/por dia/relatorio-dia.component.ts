@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { caixaDataEntrada, caixaDataSaida } from '../../caixa-data';
 
 @Component({
   selector: 'app-relatorio-dia',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./relatorio-dia.component.css']
 })
 export class RelatorioDiaComponent {
+
+  dataEntrada = caixaDataEntrada;
+  dataSaida = caixaDataSaida;
 
 }

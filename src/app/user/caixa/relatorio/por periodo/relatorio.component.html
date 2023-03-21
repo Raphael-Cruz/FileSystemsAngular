@@ -69,32 +69,20 @@
         <tr>
           <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-            [ngClass]="
-              color === 'light'
-                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
-                : 'bg-red-800 text-red-300 border-red-700'
-            "
+            
           >
           Data
           </th>
           <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-            [ngClass]="
-              color === 'light'
-                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
-                : 'bg-red-800 text-red-300 border-red-700'
-            "
+            
           >
           Tipo
 
           </th>
           <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-            [ngClass]="
-              color === 'light'
-                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
-                : 'bg-red-800 text-red-300 border-red-700'
-            "
+           
           >
           Valor
           </th>
@@ -102,27 +90,27 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr  *ngFor="let data of dataEntrada">
           <th
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
           >
         
             <span
               class="ml-3 font-bold"
-              [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-white'"
+             
             >
-             01/01/2000
+             {{data.data}}
             </span>
           </th>
           <td
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
           >
-            Dinheiro
+            {{data.tipo}}
           </td>
           <td
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
           >
-            <i class="fas fa-circle text-green-500 mr-2"></i> R$ 1000.00
+            <i class="fas fa-circle text-green-500 mr-2"></i> R$ {{data.valor}}
           </td>
         
           <td
@@ -131,102 +119,19 @@
            
           </td>
         </tr>
-        <tr>
-          <th
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
-          >
        
-            <span
-              class="ml-3 font-bold"
-              [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-white'"
-            >
-            01/01/2000
-            </span>
-          </th>
-          <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-          >
-            Dinheiro
-          </td>
-          <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-          >
-            <i class="fas fa-circle text-green-500 mr-2"></i>
-            R$ 1000.00
-          </td>
-     
-          <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right"
-          >
-            
-          </td>
-        </tr>
-        <tr>
-          <th
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
-          >
       
-            <span
-              class="ml-3 font-bold"
-              [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-white'"
-            >
-            01/01/2000
-            </span>
-          </th>
-          <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-          >
-          Dinheiro
-          </td>
-          <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-          >
-            <i class="fas fa-circle text-green-500 mr-2"></i> R$ 1000.00
-          </td>
-      
-          <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right"
-          >
-           
-          </td>
-        </tr>
-        <tr>
-          <th
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
-          >
-      
-            <span
-              class="ml-3 font-bold"
-              [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-white'"
-            >
-             01/01/2000
-            </span>
-          </th>
-          <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-          >
-          Dinheiro
-          </td>
-          <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-          >
-            <i class="fas fa-circle text-green-500 mr-2"></i> R$ 1000.00
-          </td>
-  
-          <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right"
-          >
-           
-          </td>
-        </tr>
+       
       
       </tbody>
     </table>
   </div>
+
+
     <div class="block w-full overflow-x-auto mt-10">
-<!-- saida table -->
+
     <table class="items-center w-full bg-transparent border-collapse pt-10">
-        <tr>
+        <tr >
           <th
             class="px-6 align-middle border-t-0 border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left"
           >
@@ -236,35 +141,23 @@
     </table>
     <table class="items-center w-full bg-transparent border-collapse ">
     <thead>
-      <tr>
+      <tr >
         <th
           class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-          [ngClass]="
-            color === 'light'
-              ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
-              : 'bg-red-800 text-red-300 border-red-700'
-          "
+          
         >
         Data
         </th>
         <th
           class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-          [ngClass]="
-            color === 'light'
-              ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
-              : 'bg-red-800 text-red-300 border-red-700'
-          "
+          
         >
         Tipo
 
         </th>
         <th
           class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-          [ngClass]="
-            color === 'light'
-              ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
-              : 'bg-red-800 text-red-300 border-red-700'
-          "
+         
         >
         Valor
         </th>
@@ -272,27 +165,27 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr *ngFor="let data of dataSaida">
         <th
           class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
         >
          
           <span
             class="ml-3 font-bold"
-            [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-white'"
+            
           >
-           01/01/2000
+           {{data.data}}
           </span>
         </th>
         <td
           class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
         >
-          Dinheiro
+          {{data.tipo}}
         </td>
         <td
           class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
         >
-          <i class="fas fa-circle text-red-500 mr-2"></i> R$ 1000.00
+          <i class="fas fa-circle text-red-500 mr-2"></i> R$ {{data.valor}}
         </td>
       
         <td
@@ -301,94 +194,7 @@
          
         </td>
       </tr>
-      <tr>
-        <th
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
-        >
-         
-          <span
-            class="ml-3 font-bold"
-            [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-white'"
-          >
-          01/01/2000
-          </span>
-        </th>
-        <td
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-        >
-          Dinheiro
-        </td>
-        <td
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-        >
-          <i class="fas fa-circle text-red-500 mr-2"></i>
-          R$ 1000.00
-        </td>
-   
-        <td
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right"
-        >
-          
-        </td>
-      </tr>
-      <tr>
-        <th
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
-        >
-          
-          <span
-            class="ml-3 font-bold"
-            [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-white'"
-          >
-          01/01/2000
-          </span>
-        </th>
-        <td
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-        >
-        Dinheiro
-        </td>
-        <td
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-        >
-          <i class="fas fa-circle text-red-500 mr-2"></i> R$ 1000.00
-        </td>
-    
-        <td
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right"
-        >
-         
-        </td>
-      </tr>
-      <tr>
-        <th
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
-        >
-          
-          <span
-            class="ml-3 font-bold"
-            [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-white'"
-          >
-           01/01/2000
-          </span>
-        </th>
-        <td
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-        >
-        Dinheiro
-        </td>
-        <td
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-        >
-          <i class="fas fa-circle text-red-500 mr-2"></i> R$ 1000.00
-        </td>
 
-        <td
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right"
-        >
-         
-        </td>
-      </tr>
     
     </tbody>
   </table>

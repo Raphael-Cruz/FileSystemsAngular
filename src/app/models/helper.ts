@@ -11,3 +11,24 @@ export interface INavbarData {
 }
 
 
+
+export interface ICaixaData {
+    data: string;
+    tipo: string;
+    descricao: string;
+    valor: number;
+    
+}
+
+
+export interface ICaixaEntidade {
+    codigo: number;
+    descricao: string;
+    
+}
+
+export interface ICaixaSaida {
+    codigo: number;
+    descricao: string;
+    
+}

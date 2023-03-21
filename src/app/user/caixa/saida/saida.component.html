@@ -1,37 +1,53 @@
-<main class="bg-gray-300 rounded-lg m-10">
-<div class="w-full text-center " >
-    <h1 class="uppercase">Cadastro de Entidade</h1>
-    <p class="p-10 ">Descricao
-        <input class="border-2 border-black" type="text" placeholder=""> 
-    </p>
-   
-   
-</div>   
-<div class="button text-center" >
-    
+<main  class="card w-full">
+    <div class="w-full text-center items-center" >
+        <h1 class="uppercase pt-5 text-center">Cadastro de Tipo de Pagamento/Saída
+        </h1>
+        <p class="pt-10 text-center">Descricao
+            <input class="border-2 border-gray-400" type="text" placeholder=""> 
+        </p>
+        
+      
+    </div>   
+    <div class="button text-center pt-10" >
+        
         <button class="caixaButton bg-gray-300 p-2 font-bold rounded-lg " > Cadastrar </button>
+        
+    </div> 
+    <div class="relative w-3/6  md:w-8/12  sm:mx-auto  mx-auto text-center mt-10">
+       
+    <table class="items-center w-full bg-transparent border-collapse">
+    <thead >
+      <tr >
+        <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+         
+        >
+        Codigo
+        </th>
+        <th
+        class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+        
+      >
+      Descrição
     
-</div>   
-
-<div class="p-5 text-center items-center ">
-   
-        <thead>
-            <tr class="card-head w-full text-center">
-            
-                <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">Codigo</th>
-                <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">Descricao</th>
-            
-            
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="hover:bg-grey-lighter">
-            <td class="py-4 px-6 border-b border-grey-light">0001</td>
-            <td class="py-4 px-6 border-b border-grey-light">Serdo Material de Construção</td>
-            
-            <span class="py-6 border-b text-xl flex flex-col items-center cursor-pointer bg-red-500"></span>
-            </tr>
-        </tbody>
-
-</div>
-</main>
+      </th>
+        
+    </thead>
+    <tbody>
+      <tr class="text-center items-center" *ngFor="let data of saida">
+          <td
+          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-md whitespace-nowrap p-4"
+        >
+          {{data.codigo}}
+        </td>
+        <td
+        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-md whitespace-nowrap p-4"
+         >
+        {{data.descricao}}
+         </td>
+          
+        </tr>
+    </tbody>
+    </table>
+    </div>
+    </main>

@@ -36,42 +36,164 @@
     
         <button class="caixaButton bg-gray-300 p-2 font-bold rounded-lg " > Cadastrar </button>
     
-</div>   
-
-<div class="caixaDiv3 pb-2 text-center items-center">
-    <p class="entrada border-b-2 border-gray-400">Entradas</p> 
-    <tr class="bg-gray-300 " >
-        <th>Data</th>
-        <th>Descricao</th>
-        <th>Tipo</th>
-        <th>Valor</th>
-     </tr>
-     <tr class="bg-gray-300 " >
-        <th>----</th>
-        <th>--------------</th>
-        <th>---</th>
-        <th>-----</th>
-     </tr>
-        <th>Total</th>
-        <th>0.00</th>
-</div>
+</div> 
 
 
-<div class="caixaDiv3 border-t-2 pt-2">
+<div class="block w-full overflow-x-auto ">
+          <p class="px-6 align-middle border-t-0 border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-center"
+          >
+            Entradas
+          </p>
+    <table class="items-center w-full bg-transparent border-collapse">
+      <thead >
+        <tr >
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+           
+          >
+          Data
+          </th>
+          <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+          
+        >
+        Descrição
 
-    <tr class="bg-gray-300 " >
-        <th>Data</th>
-        <th>Descricao</th>
-        <th>Tipo</th>
-        <th>Valor</th>
-     </tr>
-     
-     <tr class="bg-gray-300 " >
-        <th>----</th>
-        <th>--------------</th>
-        <th>---</th>
-        <th>-----</th>
-     </tr>
-     <th>Total</th>
-     <th>0.00</th>  
+        </th>
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+            
+          >
+          Tipo
+
+          </th>
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+           
+          >
+          Valor
+          </th>
+          <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+         
+        >
+        Acao
+        </th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-center items-center" *ngFor="let data of dataEntrada">
+            <td
+            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+          >
+            {{data.data}}
+          </td>
+          <td
+          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+        >
+          {{data.descricao}}
+        </td>
+            <td
+              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+            >
+              {{data.tipo}}
+            </td>
+            <td
+              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+            >
+              <i class="fas fa-circle text-green-500 mr-2"></i> R$ {{data.valor}}
+            </td>
+          
+            <button
+            class="caixaButton bg-blue-200 rounded-full m-1 p-2 items-center "
+          >
+          <i class="fas fa-eraser text-red-500 mr-2"></i> Apagar
+          </button>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+
+    <div class="block w-full overflow-x-auto mt-10 ">
+<!-- saida table -->
+
+    <p class="px-6 align-middle border-t-0 border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-center"
+    >
+    Saídas
+
+    </p>
+    <table class="items-center w-full bg-transparent border-collapse ">
+    <thead>
+      <tr>
+        <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+         
+        >
+        Data
+        </th>
+        <th
+        class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+       
+      >
+      Descrição
+      </th>
+        <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+         
+        >
+        Tipo
+
+        </th>
+        <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+         
+        >
+        Valor
+        </th>
+        <th
+        class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+       
+      >
+      Acao
+      </th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        
+          <tr class="text-center items-center" *ngFor="let data of dataSaida">
+            <td
+              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+            >
+              {{data.data}}
+            </td>
+            <td
+            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+          >
+            {{data.descricao}}
+          </td>
+            <td
+              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+            >
+              {{data.tipo}}
+            </td>
+            <td
+              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+            >
+              <i class="fas fa-circle text-red-500 mr-2"></i> R$ {{data.valor}}
+            </td>
+          
+            <button
+              class="caixaButton bg-blue-200 rounded-full m-1 p-2 items-center "
+            >
+            <i class="fas fa-eraser text-red-500 mr-2"></i> Apagar
+            </button>
+          </tr>
+   
+    
+    </tbody>
+  </table>
+
     </div>
+

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { caixaDataEntrada, caixaDataSaida } from './caixa-data';
 
 @Component({
   selector: 'app-caixa',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class CaixaComponent {
 
+dataEntrada = caixaDataEntrada;
+dataSaida = caixaDataSaida;
 }
