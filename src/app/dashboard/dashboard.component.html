@@ -1,10 +1,11 @@
 
-<div  class="bg-green-500 md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6"
+<div  class="bg-gradient-to-t from-green-200 via-green-400 to-green-900 md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4"
 >
-    
+
+
     
     <aside  class="md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center w-full mx-auto">
-        <div class="logo-template">
+        <div class="logo-container">
             <a href="index.html" class="logo-template flex">
                 <img  src="assets/img/logo.jpg" class="logo" > 
             </a>
@@ -12,17 +13,23 @@
         <nav  class="text-white text-base font-semibold pt-3 " >
             <ul class="sidenav-nav ">
                 <li class="sidenav-nav-item " *ngFor="let data of navData">
-                    <a (click)="handleClick(data)" *ngIf="collapsed;" class="sidenav-nav-link"  [routerLink]="[data.routeLink]" 
+                    <a (click)="handleClick(data)" *ngIf="collapsed;" class="relative inline-flex items-center justify-center py-4 overflow-hidden font-mono font-medium tracking-tighter text-white  group"  [routerLink]="[data.routeLink]" 
                     routerLinkActive="active"
                     [routerLinkActiveOptions]="{exact: true}" >
-                        <i class="sidenav-link-icon " [class]="data.icon" ></i>
-                        <span class="sidenav-link-text " *ngIf="collapsed" >
+                    <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-green-600 rounded-full group-hover:w-56 group-hover:h-56 " *ngIf="collapsed" ></span>
+                        <i class="relative sidenav-link-icon " [class]="data.icon" ></i>
+                        
+                  
+                        <span class="relative sidenav-link-text " *ngIf="collapsed" >
+                            
                             {{data.label}}
                         </span>
-                        <i *ngIf="data.items && collapsed" class="menu-collapse-icon  ml-5"
+                        
+                        <i *ngIf="data.items && collapsed" class="relative menu-collapse-icon "
                         [ngClass]="!data.expanded ? 'fal fa-angle-right' : 'fal fa-angle-down'"
                         ></i>
                     </a>
+
                     <a *ngIf="data.expanded">
                         <ng-container *ngFor="let item of data.items" class="sublevel-nav-item">
                             <a (click)="handleSubMenuClick(item)" class="sidenav-nav-link pl-3 ml-10 mt-2 " [ngClass]="{'active-sublevel': item.expanded}">
@@ -38,6 +45,7 @@
                                     <a  class="sidenav-nav-link pl-7 ml-10 mt-2" [routerLink]="[subItem.routeLink]" routerLinkActive="active">
                                         <span class="sublevel-link-text">
                                             {{subItem.label}}
+                                         
                                         </span>
                                     </a>
                                 </ng-container>

@@ -1,5 +1,6 @@
 import { IVendas } from "../../models/helper";
 import { IListaPreco } from "../../models/helper";
+import { IConsultaProposta } from "../../models/helper";
 
 
 export const situacaoVendas: IVendas[] = [
@@ -79,7 +80,43 @@ export const listaPreco: IListaPreco[] = [
         quantidade:0,
         desconto:0,
         total: 29.80
+        
     }   
 
 ];
+
+
+export const consultaProposta: IConsultaProposta[] = [
+   
+    
+    {
+        codigo: 0o1,
+        cliente: "Dona Maria",
+        cadastro: "0001",
+        dataPrevista: "02/04/05",
+        situacao: "Pedido",
+        frete: "entrega",
+        total: 488.50,
+    },
+    {
+        codigo: 0o1,
+        cliente: "Dona Maria",
+        cadastro: "0001",
+        dataPrevista: "02/04/05",
+        situacao: "Pedido",
+        frete: "entrega",
+        total: 488.50,
+    },   
+    {
+        codigo: 0o1,
+        cliente: "Dona Maria",
+        cadastro: "0001",
+        dataPrevista: "02/04/05",
+        situacao: "Pedido",
+        frete: "entrega",
+        total: 488.50,
+    }  
+
+];
+   
    

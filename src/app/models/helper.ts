@@ -52,3 +52,14 @@ export interface IListaPreco {
     total: number;
     
 }
+
+export interface IConsultaProposta {
+    codigo: number;
+    cliente: string;
+    cadastro: string;
+    dataPrevista: string;
+    situacao: string;
+    frete: string;
+    total: number;
+    
+}

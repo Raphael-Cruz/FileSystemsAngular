@@ -3,50 +3,43 @@
 @tailwind components;
 @tailwind utilities;
 
-    @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
-    .font-family-karla { font-family: karla; }
-   
-    .cta-btn { color: #2d6a4f; }
-    .upgrade-btn { background: #2d6a4f; }
-    .upgrade-btn:hover { background: #2d6a4f; }
-    
-    .bg-sidebar {
-      background: linear-gradient(#52b69a, #99d98c);
-      
-   }
-  
-   .mainComponent {
-      background: linear-gradient(90deg,#edf2fb, #abc4ff);
-   }
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+.font-family-karla { font-family: karla; }
 
-   .active-sublevel {
-    color: #f3f3f3 !important;
-    
+.cta-btn { color: #2d6a4f; }
+.upgrade-btn { background: #2d6a4f; }
+.upgrade-btn:hover { background: #2d6a4f; }
+
+.bg-sidebar {
+  background: linear-gradient(#52b69a, #99d98c);
+  
 }
 
-    /* ------------------------------------------------------------------------------ */
-    .navBg{
-      background: linear-gradient(to bottom,#ced4da, #adb5bd);
-      
-      
-   }
-   .dashMain{
-    background: linear-gradient(to right,#ced4da, #adb5bd);
-    
-    
- }
+.mainComponent {
+  background: linear-gradient(90deg,#edf2fb, #abc4ff);
+}
+
+.active-sublevel {
+color: #f3f3f3 !important;
+
+}
+
+/* ------------------------------------------------------------------------------ */
+.navBg{
+  background: linear-gradient(to bottom,#ced4da, #adb5bd);
   
 
-.sub-menu {
-  display: none;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  
 }
-    
-.sub-menu[hidden="false"] {
-  display: block;
+.dashMain{
+background: linear-gradient(to right,#ced4da, #adb5bd);
+
+
 }
-    
+
+
+ 
+
   
 body {
       position: relative;

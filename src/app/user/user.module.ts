@@ -37,6 +37,7 @@ import { FormaPagamentoComponent } from './vendas/cadastro/forma-pagamento/forma
 import { ListaDePrecoComponent } from './vendas/cadastro/lista-de-preco/lista-de-preco.component';
 import { ConsultaProdutoComponent } from './vendas/consulta/consulta-produto/consulta-produto.component';
 import { PropostaComercialComponent } from './vendas/cadastro/proposta-comercial/proposta-comercial.component';
+import { ConsultaPropostaComponent } from './vendas/consulta/consulta-proposta/consulta-proposta.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { PropostaComercialComponent } from './vendas/cadastro/proposta-comercial
          FormaPagamentoComponent,
          ListaDePrecoComponent,
          ConsultaProdutoComponent,
-         PropostaComercialComponent
+         PropostaComercialComponent,
+         ConsultaPropostaComponent
   ],
   imports: [
     CommonModule,
@@ -87,7 +89,8 @@ import { PropostaComercialComponent } from './vendas/cadastro/proposta-comercial
     FormaPagamentoComponent,
     ListaDePrecoComponent,
     ConsultaProdutoComponent,
-    PropostaComercialComponent
+    PropostaComercialComponent,
+    ConsultaPropostaComponent
   ]
 })
 export class UserModule { }
