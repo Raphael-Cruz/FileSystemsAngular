@@ -1,5 +1,5 @@
-import { IVendas } from "../../../../models/helper";
-import { IListaPreco } from "../../../../models/helper";
+import { IVendas } from "../../models/helper";
+import { IListaPreco } from "../../models/helper";
 
 
 export const situacaoVendas: IVendas[] = [
@@ -32,6 +32,7 @@ export const formaPagamento: IVendas[] = [
         codigo: 0o1,
        
         descricao: "CHEQUE PRE",
+
     },
     {
         codigo: 0o2,
@@ -54,19 +55,31 @@ export const listaPreco: IListaPreco[] = [
         descricao: "1 INTERRUPTOR PARALELO 10A 250V BC 551021",
         unidade: "UN",
         preco: 16.20,
+        estoque: 2,
+        quantidade:0,
+        desconto:0,
+        total: 16.20
     },
     {
         codigo: 18267,
         descricao: "1416 REGISTRO PRESSAO C-50 1/2' 10150",
         unidade: "UN",
         preco: 65.90,
-    },
+        estoque: 5,
+        quantidade:0,
+        desconto:0,
+        total: 65.90
+    },   
     {
         codigo: 11504	,
         descricao: "2930 LANTERNA 7LED RECARREGAVEL",
         unidade: "UN",
         preco: 29.80,
-    }
+        estoque: 5,
+        quantidade:0,
+        desconto:0,
+        total: 29.80
+    }   
 
 ];
    

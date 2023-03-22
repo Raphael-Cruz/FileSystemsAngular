@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { formaPagamento } from '../produto/vendas-data';
+import { formaPagamento } from '../../vendas-data';
 
 @Component({
   selector: 'app-forma-pagamento',

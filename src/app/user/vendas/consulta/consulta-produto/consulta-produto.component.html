@@ -1,0 +1,76 @@
+<main  class="card  w-full ">
+    
+    <div class="relative mx-auto text-center mt-10">
+        
+   
+            <h2 class="uppercase p-5 text-center font-semibold">Consulta de Produtos/Serviços </h2>
+            
+        <div class="serchBox mt-2 mr-5">
+            <input class="border-2 border-gray-400 text-center rounded" type="text" name="serach" [(ngModel)]="searchText" placeholder="Pesquisar">
+           
+          </div>
+    <div class="relative mx-auto text-center mt-5">
+        <table>
+            <thead  class="relative " >
+                <tr class="p-2 border border-solid text-md uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">
+                    <th>
+                    Codigo
+                    </th>
+                    
+                    <th>
+                        Descrição
+                    </th>
+                    <th>
+                        Unidade
+                    </th>
+                    <th>
+                        Estoque
+                    </th>
+                    <th>
+                        Preço
+                    </th>
+                </tr>  
+            </thead>
+            
+            <tbody>
+               
+                <tr class="text-center items-center " *ngFor="let data of lista | filter:searchText">
+                    <td
+                        class="px-10 align-middle"
+                    >
+                        {{data.codigo}}
+                    </td>
+                    <td
+                    class="px-10 align-middle  "
+                    >
+                    {{data.descricao}}
+                    </td>
+                    <td
+                    class="px-10 align-middle  "
+                    >
+                    {{data.unidade}}
+                    </td>
+                    <td
+                    class="px-10 align-middle  "
+                    >
+                    {{data.estoque}}
+                    </td>
+                    <td
+                    class="px-10 align-middle  "
+                    >
+                    {{data.preco}}
+                    </td>
+                        
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> 
+
+    <div class="button text-center pt-10" >
+        
+        <button class="caixaButton bg-gray-300 p-2 font-bold rounded-lg " > Cadastrar </button>
+        
+    </div> 
+  
+    </main>

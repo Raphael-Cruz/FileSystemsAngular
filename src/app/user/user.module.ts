@@ -35,6 +35,8 @@ import { ProdutoComponent } from './vendas/cadastro/produto/produto.component';
 import { SituacaoPropostaComponent } from './vendas/cadastro/situacao-proposta/situacao-proposta.component';
 import { FormaPagamentoComponent } from './vendas/cadastro/forma-pagamento/forma-pagamento.component';
 import { ListaDePrecoComponent } from './vendas/cadastro/lista-de-preco/lista-de-preco.component';
+import { ConsultaProdutoComponent } from './vendas/consulta/consulta-produto/consulta-produto.component';
+import { PropostaComercialComponent } from './vendas/cadastro/proposta-comercial/proposta-comercial.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { ListaDePrecoComponent } from './vendas/cadastro/lista-de-preco/lista-de
          ProdutoComponent,
          SituacaoPropostaComponent,
          FormaPagamentoComponent,
-         ListaDePrecoComponent
+         ListaDePrecoComponent,
+         ConsultaProdutoComponent,
+         PropostaComercialComponent
   ],
   imports: [
     CommonModule,
@@ -81,7 +85,9 @@ import { ListaDePrecoComponent } from './vendas/cadastro/lista-de-preco/lista-de
     ProdutoComponent,
     SituacaoPropostaComponent,
     FormaPagamentoComponent,
-    ListaDePrecoComponent
+    ListaDePrecoComponent,
+    ConsultaProdutoComponent,
+    PropostaComercialComponent
   ]
 })
 export class UserModule { }

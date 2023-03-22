@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { listaPreco } from '../produto/vendas-data';
+import { listaPreco } from '../../vendas-data';
 
 @Component({
   selector: 'app-lista-de-preco',

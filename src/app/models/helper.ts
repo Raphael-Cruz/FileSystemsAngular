@@ -45,5 +45,10 @@ export interface IListaPreco {
     descricao: string;
     unidade: string;
     preco: number;
+    estoque: number;
+   
+    quantidade: number;
+    desconto: number
+    total: number;
     
 }

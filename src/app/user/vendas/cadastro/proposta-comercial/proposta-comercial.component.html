@@ -1,0 +1,301 @@
+<main  class="card  w-full ">
+    
+    <div class="relative mx-auto text-center mt-5">
+        
+   
+            <h2 class="uppercase p-5 text-center font-semibold">Proposta Comercial</h2>
+            
+        <div class="serchBox mt-2 mr-5">
+            <button class="caixaButton bg-gray-300 p-2 font-semibold rounded-lg  hover:border-2 hover:border-gray-500 hover:opacity-80 " > Escolher Clientes </button>
+           
+          </div>
+    <div class="block flex justify-center mx-auto text-center mt-10">
+        <table class="border ">
+          <thead>
+               
+                <tr class="p-2 border text-md uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center" >
+                    <th
+                        class="px-5 "
+                    >
+                    Nome
+                    
+                    </th>
+                    <th
+                    class="px-5   "
+                    >
+                    Logradouro
+                    </th>
+                    <th
+                    class="px-5   "
+                    >
+                    Cliente
+                    </th>
+                        
+                </tr>
+
+              
+                <tr>
+                    <td
+                        class="px-5 "
+                    >
+                    John
+                    </td>
+                    <td
+                    class="px-5   "
+                    >
+                    Rua Kinder Ovo 
+                    </td>
+                    <td
+                    class="px-5   "
+                    >
+                    Cliente 
+                    </td>
+                        
+                </tr>
+                <span class="p-1"></span>
+                <tr class=" border border-solid text-md uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center" >
+                    <th
+                        class="px-5 "
+                    >
+                    Bairro
+                    
+                    </th>
+                    <th
+                    class="px-5   "
+                    >
+                    Referencia
+                    </th>
+                    <th
+                    class="px-5   "
+                    >
+                    Tel
+                    </th>
+                        
+                </tr>
+                <span class="mt-1"></span>
+                <tr >
+                    <td
+                        class="px-5 "
+                    >
+                    Bela City
+                    </td>
+                    <td
+                    class="px-5   "
+                    >
+                    Supermercado Away 
+                    </td>
+                    <td
+                    class="px-5   "
+                    >
+                    (27)90000-0000 
+                    </td>
+                        
+                </tr>
+                <span class="p-1"></span>
+                <tr class="p-2 border border-solid text-md uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center" >
+                    <th
+                        class="px-5 "
+                    >
+                    Entidade
+                    
+                    </th>
+                    <th
+                    class="px-5   "
+                    >
+                    UF
+                    </th>
+                    <th
+                    class="px-5   "
+                    >
+                    Atendente
+                    </th>
+                        
+                </tr>
+                <tr >
+                    <td
+                        class="px-5 "
+                    >
+                    Rimacol Material de Construcao
+                    </td>
+                    <td
+                    class="px-5   "
+                    >
+                    ES 
+                    </td>
+                    <td
+                    class="px-5   "
+                    >
+                    Sergio 
+                    </td>
+                        
+                </tr>
+
+                
+            </thead>
+        </table>
+    </div>
+    <div class="block relative mx-auto text-center mt-20">
+        <div class="serchBox mt-2 mr-5">
+                    <button class="caixaButton bg-gray-300 p-2 font-semibold rounded-lg  hover:border-2 hover:border-gray-500 hover:opacity-80 " > Escolher Items </button>
+                   
+                  </div>
+            <div class="relative  mx-auto text-center mt-5">
+                <table >
+                    <thead  class="relative  " >
+                        <tr class="p-2 border border-solid text-md uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">
+                                                      
+                            <th >
+                                Descrição
+                            </th>
+                            <th class="flex mr-5 ml-5">
+                                Quantidade
+                            </th>
+                            <th >
+                                Unidade
+                            </th>
+                            <th class="flex mr-5 ml-5">
+                                Valor Desconto
+                            </th>
+                            <th>
+                                Valor Unitario
+                            </th>
+                            <th class="flex ml-5">
+                                Valor Total
+                            </th>
+                        </tr>  
+                    </thead>
+                    
+                    <tbody>
+                       
+                        <tr class="text-center items-center overflow-auto" *ngFor="let data of lista">
+                            <td
+                                class="px-5 align-middle"
+                            >
+                            {{data.descricao}}
+                            </td>
+                            <td
+                            class="px-5 align-middle  "
+                            >
+                            {{data.quantidade}}
+                            </td>
+                            <td
+                            class="px-5 align-middle  "
+                            >
+                            {{data.unidade}}
+                            </td>
+                            <td
+                            class="px-5 align-middle  "
+                            >
+                            {{data.desconto}}
+                            </td>
+                            <td
+                            class="px-5 align-middle  "
+                            >
+                            {{data.preco}}
+                            </td>
+                            <td
+                            class="px-5 align-middle  "
+                            >
+                            {{data.total}}
+                            </td>
+                                
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+        
+        <div class="block  mx-auto text-center mt-5">
+          
+            <span class="flex mt-20 mb-5 border-t border-solid  "> </span>
+            <div class="w-full flex text-center justify-center p-5">
+                                                      
+                <th class="" >
+                    Forma de Pagamento:
+                    <input class="border border-black" type="text">
+                </th>
+            </div>
+                <table class="w-full flex text-center justify-center">
+                    
+                    
+                    <tbody>
+                       
+                        <tr class="text-center items-center overflow-auto" >
+                            <td
+                                class="px-5 "
+                            >
+                           Data Cadastro:
+                           <input class="border border-black" type="text">
+                            </td>
+                            <td
+                            class="px-5 "
+                                >
+                            Data Prevista: &nbsp;   
+                            <input class="border border-black" type="text">
+                            </td>
+                            <td
+                            class="px-5"
+                                >
+                            Frete:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                            <input class="border border-black" type="text">
+                                </td>
+                                
+                        </tr>
+                        <tr class="text-center items-center overflow-auto" >
+                            <td
+                                class="px-5"
+                            >
+                           Desconto Itens:
+                           <input class="border border-black" type="text">
+                            </td>
+                            <td
+                            class="px-5"
+                                >
+                            Desconto Total:
+                            <input class="border border-black" type="text">
+                            </td>
+                            <td
+                            class="px-5"
+                                >
+                            Soma Itens:
+                            <input class="border border-black" type="text">
+                                </td>
+                                
+                        </tr>
+                       
+                       
+                    </tbody>
+                </table>
+                <div class="w-full flex justify-end text-center mt-5 mb-5" >
+                    <td
+                        class="px-5 align-middle"
+                    >
+                   Total:
+                   <input class="border border-black" class="border border-black" type="text">
+                    </td>
+                   
+                </div>
+                <div class="w-full flex justify-center text-center overflow-auto" >
+                    <td
+                    class="px-5 align-middle"
+                        >
+                    OBS:
+                    <textarea class="border border-black" id="obs" rows="4" cols="50"></textarea>
+                    </td>
+                </div>
+            </div>
+          
+            <div class="button flex justify-center text-center pt-5 mb-20" >
+        
+                <button class="caixaButton bg-gray-300 p-2 mr-5  font-semibold rounded-lg  hover:border-2 hover:border-gray-500 hover:opacity-80 " > Editar </button>
+                <button class="caixaButton bg-gray-300 p-2 font-semibold rounded-lg  hover:border-2 hover:border-gray-500 hover:opacity-80 " > Imprimir </button>
+                
+            </div> 
+          
+</div> 
+
+   
+
+
+  
+    </main>
