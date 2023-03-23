@@ -3,208 +3,175 @@
     <div class="relative mx-auto text-center mt-5">
         
    
-            <h2 class="uppercase p-5 text-center font-semibold">Proposta Comercial</h2>
+        <h2 class="uppercase p-5 text-center font-semibold">Proposta Comercial</h2>
             
         <div class="serchBox mt-2 mr-5">
             <button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">Escolher Clientes</button>
+        </div>
 
-           
-          </div>
-    <div class="block flex justify-center mx-auto text-center mt-10">
-        <table class="border ">
-          <thead>
-               
+        <div class="block flex justify-center mx-auto text-center mt-5">
+            <table class="border ">
+            <thead>
                 <tr class="p-2 border text-md uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center" >
-                    <th
-                        class="px-5 "
-                    >
+                    <th class="px-5 ">
                     Nome
-                    
                     </th>
-                    <th
-                    class="px-5   "
-                    >
+                    <th class="px-5">
                     Logradouro
                     </th>
-                    <th
-                    class="px-5   "
-                    >
+                    <th class="px-5" >
                     Cliente
                     </th>
-                        
                 </tr>
 
-              
                 <tr>
-                    <td
-                        class="px-5 "
-                    >
+                    <td class="px-5">
                     John
                     </td>
-                    <td
-                    class="px-5   "
-                    >
+                    <td class="px-5">
                     Rua Kinder Ovo 
                     </td>
-                    <td
-                    class="px-5   "
-                    >
+                    <td class="px-5">
                     Cliente 
                     </td>
-                        
                 </tr>
                 <span class="p-1"></span>
                 <tr class=" border border-solid text-md uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center" >
-                    <th
-                        class="px-5 "
-                    >
+                    <th class="px-5 " >
                     Bairro
-                    
-                    </th>
-                    <th
-                    class="px-5   "
-                    >
+                     </th>
+                    <th class="px-5">
                     Referencia
                     </th>
-                    <th
-                    class="px-5   "
-                    >
+                    <th class="px-5">
                     Tel
                     </th>
-                        
                 </tr>
                 <span class="mt-1"></span>
                 <tr >
-                    <td
-                        class="px-5 "
-                    >
+                    <td class="px-5 " >
                     Bela City
                     </td>
-                    <td
-                    class="px-5   "
-                    >
+                    <td class="px-5">
                     Supermercado Away 
                     </td>
-                    <td
-                    class="px-5   "
-                    >
+                    <td class="px-5">
                     (27)90000-0000 
                     </td>
                         
                 </tr>
                 <span class="p-1"></span>
                 <tr class="p-2 border border-solid text-md uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center" >
-                    <th
-                        class="px-5 "
-                    >
+                    <th class="px-5 ">
                     Entidade
                     
                     </th>
-                    <th
-                    class="px-5   "
-                    >
+                    <th class="px-5">
                     UF
                     </th>
-                    <th
-                    class="px-5   "
-                    >
+                    <th class="px-5">
                     Atendente
                     </th>
-                        
                 </tr>
                 <tr >
-                    <td
-                        class="px-5 "
-                    >
+                    <td class="px-5 " >
                     Rimacol Material de Construcao
                     </td>
-                    <td
-                    class="px-5   "
-                    >
+                    <td class="px-5">
                     ES 
                     </td>
-                    <td
-                    class="px-5   "
-                    >
+                    <td class="px-5">
                     Sergio 
                     </td>
-                        
                 </tr>
-
-                
             </thead>
-        </table>
-    </div>
-    <div class="block relative mx-auto text-center mt-20">
-        <div class="serchBox mt-2 mr-5">
-            <button type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Escolher Items</button>
+            </table>
+        </div>
 
-                   
-                  </div>
-            <div class="relative  mx-auto text-center mt-5">
-                <table >
-                    <thead  class="relative  " >
-                        <tr class="p-2 border border-solid text-md uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">
-                                                      
-                            <th >
-                                Descrição
-                            </th>
-                            <th class="flex mr-5 ml-5">
-                                Quantidade
-                            </th>
-                            <th >
-                                Unidade
-                            </th>
-                            <th class="flex mr-5 ml-5">
-                                Valor Desconto
-                            </th>
-                            <th>
-                                Valor Unitario
-                            </th>
-                            <th class="flex ml-5">
-                                Valor Total
-                            </th>
-                        </tr>  
-                    </thead>
-                    
-                    <tbody>
-                       
-                        <tr class="text-center items-center overflow-auto" *ngFor="let data of lista">
-                            <td
-                                class="px-5 align-middle"
-                            >
-                            {{data.descricao}}
-                            </td>
-                            <td
-                            class="px-5 align-middle  "
-                            >
-                            {{data.quantidade}}
-                            </td>
-                            <td
-                            class="px-5 align-middle  "
-                            >
-                            {{data.unidade}}
-                            </td>
-                            <td
-                            class="px-5 align-middle  "
-                            >
-                            {{data.desconto}}
-                            </td>
-                            <td
-                            class="px-5 align-middle  "
-                            >
-                            {{data.preco}}
-                            </td>
-                            <td
-                            class="px-5 align-middle  "
-                            >
-                            {{data.total}}
-                            </td>
-                                
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="block relative mx-auto mt-20">
+            <div class="serchBox mt-2 mr-5 mb-5">
+                <button type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Escolher Items</button>
             </div>
+                    <div class="relative  w-full overflow-x-hidden shadow-md rounded-lg sm:rounded-lg ">
+                        <table class="table w-full text-sm text-center text-gray-500 dark:text-gray-400  ">
+                            <thead class="text-xs bg-gray-400 text-gray-700 uppercase dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                        
+                                <th scope="col" class="px-6 py-3 ">
+                                    <div class="flex items-center text-center">
+                                        Descrição
+                                        
+                                    </div>
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    <div class="flex items-center">
+                                        Quantidade
+        
+                                        
+                                    </div>
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    <div class="flex items-center">
+                                        Unidade
+        
+                                        
+                                    </div>
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    <div class="flex items-center">
+                                        Valor Desconto
+                                        
+                                    </div>
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    <div class="flex items-center">
+                                        Valor Unitario
+                                        
+                                    </div>
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    <div class="flex items-center">
+                                        Total
+                                        
+                                    </div>
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    <span class="sr-only">Edit</span>
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    <span class="sr-only">Apagar</span>
+                                </th>
+                            </tr>
+                        </thead>
+                    
+                        <tbody>
+                            <tr class="text-left bg-white border-b bg-gray-100 dark:bg-gray-800 dark:border-gray-700  font-medium text-gray-900 whitespace-nowrap dark:text-white" *ngFor="let data of lista">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                    {{data.descricao}}
+                                </th>
+                                <td class="px-6 py-4 text-center">
+                                    {{data.quantidade}}
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    {{data.unidade}}
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    {{data.desconto}}
+                                </td>
+                                <td class="px-6 py-4 text-center">
+                                    {{data.preco}}
+                                </td>
+                            
+                                <td class="px-6 py-4 text-center">
+                                    R$ {{data.total}}
+                                </td>
+                            
+                            </tr>
+                            
+                        </tbody>
+                    
+                    </table>
+                </div>
         </div> 
         
         <div class="block  mx-auto text-center mt-5">
@@ -218,10 +185,7 @@
                 </th>
             </div>
                 <table class="w-full flex text-center justify-center">
-                    
-                    
                     <tbody>
-                       
                         <tr class="text-center items-center overflow-auto" >
                             <td
                                 class="px-5 "
@@ -264,10 +228,9 @@
                                 </td>
                                 
                         </tr>
-                       
-                       
                     </tbody>
                 </table>
+
                 <div class="w-full flex justify-end text-center mt-5 mb-5" >
                     <td
                         class="px-5 align-middle"
@@ -285,19 +248,13 @@
                     <textarea class="border border-black" id="obs" rows="4" cols="50"></textarea>
                     </td>
                 </div>
-            </div>
+        </div>
           
-            <div class="button flex justify-center text-center pt-5 mb-20" >
-        
-                <button type="button" class="text-white bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:focus:ring-yellow-800 shadow-lg shadow-yellow-500/50 dark:shadow-lg dark:shadow-yellow-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Editar</button>
-                <button type="button" class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Imprimir</button>
-                
-            </div> 
-          
-</div> 
-
-   
-
-
-  
-    </main>
+        <div class="button flex justify-center text-center pt-5 mb-20" >
+    
+            <button type="button" class="text-white bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:focus:ring-yellow-800 shadow-lg shadow-yellow-500/50 dark:shadow-lg dark:shadow-yellow-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Editar</button>
+            <button type="button" class="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Imprimir</button>
+            
+        </div> 
+    </div> 
+</main>

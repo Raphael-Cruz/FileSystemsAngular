@@ -3,40 +3,42 @@
     <div class="relative mx-auto text-center mt-10">
         
         <table>
-            <h2 class="uppercase p-10 text-center font-semibold">Cadastro Situação Proposta
+            <h2 class="uppercase p-10 text-center font-semibold">Cadastro de Situação de Proposta
             </h2>
-            <tr class="flex text-center mx-auto">
+            <tr class="flex text-center mb-5 mx-auto">
                 <td >Descrição :
                     <input class="border-2 border-gray-400" type="text" placeholder=""> 
                 </td>
             </tr>
         </table>
-    <div class="relative mx-auto text-center mt-20">
-        <table>
-            <thead  class="relative " >
-                <tr class="p-2 border border-solid text-md uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center">
-                    <th>
-                    Codigo
-                    </th>
-                    
-                    <th>
-                        Descrição
-                    </th>
-                </tr>  
-            </thead>
+        <div class="relative  w-full overflow-x-hidden shadow-md rounded-lg sm:rounded-lg ">
+            <table class="table w-full text-sm text-center text-gray-500 dark:text-gray-400  ">
+                <thead class="text-xs bg-gray-400 text-gray-700 uppercase dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 ">
+                            <div class="flex items-center text-left">
+                                Codigo
+                                
+                            </div>
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            <div class="flex items-center text-left">
+                                DESCRIÇÃO
+
+                                
+                            </div>
+                        </th>
+                    </tr>  
+                </thead>
             <tbody>
-                <tr class="text-center items-center " *ngFor="let data of situacao">
-                    <td
-                        class="px-10 align-middle"
-                    >
-                        {{data.codigo}}
-                    </td>
-                    <td
-                    class="px-10 align-middle  "
-                    >
-                    {{data.descricao}}
-                    </td>
-                        
+               
+                    <tr class="text-left bg-white border-b bg-gray-100 dark:bg-gray-800 dark:border-gray-700  font-medium text-gray-900 whitespace-nowrap dark:text-white" *ngFor="let data of  situacao">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            {{data.codigo}}
+                        </th>
+                        <td class="px-6 py-4 text-left">
+                            {{data.descricao}}
+                        </td>
                 </tr>
             </tbody>
         </table>
