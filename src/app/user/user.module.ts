@@ -38,6 +38,9 @@ import { ListaDePrecoComponent } from './vendas/cadastro/lista-de-preco/lista-de
 import { ConsultaProdutoComponent } from './vendas/consulta/consulta-produto/consulta-produto.component';
 import { PropostaComercialComponent } from './vendas/cadastro/proposta-comercial/proposta-comercial.component';
 import { ConsultaPropostaComponent } from './vendas/consulta/consulta-proposta/consulta-proposta.component';
+import { ContasPagarComponent } from './financeiro/cadastrar/contas-pagar/contas-pagar.component';
+import { ContasReceberComponent } from './financeiro/cadastrar/contas-receber/contas-receber.component';
+import { CadastroFornecedorComponent } from './financeiro/cadastrar/cadastro-fornecedor/cadastro-fornecedor.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,10 @@ import { ConsultaPropostaComponent } from './vendas/consulta/consulta-proposta/c
          ListaDePrecoComponent,
          ConsultaProdutoComponent,
          PropostaComercialComponent,
-         ConsultaPropostaComponent
+         ConsultaPropostaComponent,
+         ContasPagarComponent,
+         ContasReceberComponent,
+         CadastroFornecedorComponent
   ],
   imports: [
     CommonModule,
@@ -90,7 +96,10 @@ import { ConsultaPropostaComponent } from './vendas/consulta/consulta-proposta/c
     ListaDePrecoComponent,
     ConsultaProdutoComponent,
     PropostaComercialComponent,
-    ConsultaPropostaComponent
+    ConsultaPropostaComponent,
+    ContasPagarComponent,
+    ContasReceberComponent,
+    CadastroFornecedorComponent
   ]
 })
 export class UserModule { }
