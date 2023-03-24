@@ -63,3 +63,23 @@ export interface IConsultaProposta {
     total: number;
     
 }
+
+
+export interface IFinanceiro {
+    codigo: number;
+    descricao: string;
+   
+    
+}
+
+export interface IContasPagar {
+    codigo: number;
+    fornecedor: string;
+    doc: number;
+    tipoConta: string;
+    descricao: string
+    vencimento: string;
+    valor: number;
+    parcela: number ;
+    pago: string
+}

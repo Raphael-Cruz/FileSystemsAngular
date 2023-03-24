@@ -41,6 +41,9 @@ import { ConsultaPropostaComponent } from './vendas/consulta/consulta-proposta/c
 import { ContasPagarComponent } from './financeiro/cadastrar/contas-pagar/contas-pagar.component';
 import { ContasReceberComponent } from './financeiro/cadastrar/contas-receber/contas-receber.component';
 import { CadastroFornecedorComponent } from './financeiro/cadastrar/cadastro-fornecedor/cadastro-fornecedor.component';
+import { TiposContaComponent } from './financeiro/cadastrar/tipos-conta/tipos-conta.component';
+import { ConsultarContaPagarComponent } from './financeiro/consulta/consultar-conta-pagar/consultar-conta-pagar.component';
+import { ConsultarContaReceberComponent } from './financeiro/consulta/consultar-conta-receber/consultar-conta-receber.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +69,10 @@ import { CadastroFornecedorComponent } from './financeiro/cadastrar/cadastro-for
          ConsultaPropostaComponent,
          ContasPagarComponent,
          ContasReceberComponent,
-         CadastroFornecedorComponent
+         CadastroFornecedorComponent,
+         TiposContaComponent,
+         ConsultarContaPagarComponent,
+         ConsultarContaReceberComponent
   ],
   imports: [
     CommonModule,
@@ -99,7 +105,10 @@ import { CadastroFornecedorComponent } from './financeiro/cadastrar/cadastro-for
     ConsultaPropostaComponent,
     ContasPagarComponent,
     ContasReceberComponent,
-    CadastroFornecedorComponent
+    CadastroFornecedorComponent,
+    TiposContaComponent,
+    ConsultarContaPagarComponent,
+    ConsultarContaReceberComponent
   ]
 })
 export class UserModule { }
