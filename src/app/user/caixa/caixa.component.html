@@ -1,170 +1,91 @@
-<main  class="card w-full">
-<h1 class="w-full p-5 text-center font-semibold uppercase"> Fluxo de Caixa</h1>
+<div class="relative flex flex-col min-w-0 break-words w-full shadow-md  rounded">
+  <h1 class="w-full p-5 text-center font-semibold uppercase"> Fluxo de Caixa</h1>
 
-<div class="caixaDiv1 text-center items-center mr-40 ml-40 space-x-96" >
-   
-        <select class=" border-2 border-gray-400" name="selectPg" id="selectPg" > Select
-            <option value="test">Selecione uma forma de pagamento/saida</option>
-            <option value="test1">test1</option>
-            <option value="test2">test2</option>
-            <option value="test3">test3</option>
-        </select>
-   
-            <select class="border-2 border-gray-400" name="selectEntd" id="selectEntd" > Select
-                <option value="test">Selecione uma entidade</option>
-                <option value="test1">test1</option>
-                <option value="test2">test2</option>
-                <option value="test3">test3</option>
-            </select>
-</div>   
-  
-
-<div class="caixaDiv2 " >
-    <p class="p-10 ">Data
-        <input class="border-2 border-gray-400" type="text" placeholder="**/**/****"> 
-    </p>
+  <div class="caixaDiv1 text-center items-center mr-40 ml-40 space-x-96" >
     
-    <p  class="p-10 ">Valor
-        <input class="border-2 border-gray-400" type="text" placeholder="0,00"> 
-    </p>
-    <p  class="p-10 ">Descricao
-        <input class="border-2 border-gray-400" type="text" placeholder="Descricao">
-    </p>
-   
-</div>   
-<div class="button text-center" >
+          <select class=" border-2 border-gray-400" name="selectPg" id="selectPg" > Select
+              <option value="test">Selecione uma forma de pagamento/saida</option>
+              <option value="test1">test1</option>
+              <option value="test2">test2</option>
+              <option value="test3">test3</option>
+          </select>
     
-  <button type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Filtrar</button>
-
+              <select class="border-2 border-gray-400" name="selectEntd" id="selectEntd" > Select
+                  <option value="test">Selecione uma entidade</option>
+                  <option value="test1">test1</option>
+                  <option value="test2">test2</option>
+                  <option value="test3">test3</option>
+              </select>
+  </div>   
     
-</div> 
+
+  <div class="caixaDiv2 " >
+      <p class="p-10 ">Data
+          <input class="border-2 border-gray-400" type="text" placeholder="**/**/****"> 
+      </p>
+      
+      <p  class="p-10 ">Valor
+          <input class="border-2 border-gray-400" type="text" placeholder="0,00"> 
+      </p>
+      <p  class="p-10 ">Descricao
+          <input class="border-2 border-gray-400" type="text" placeholder="Descricao">
+      </p>
+    
+  </div>   
+  <div class="button text-center" >
+      
+    <button type="button" class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Filtrar</button>
+
+      
+  </div> 
 
 
-<div class="block w-full overflow-x-auto ">
-          <p class="px-6 align-middle border-t-0 border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-center"
-          >
-            Entradas
-          </p>
-    <table class="items-center w-full bg-transparent border-collapse">
-      <thead >
-        <tr >
-          <th
-            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
-           
-          >
-          Data
-          </th>
-          <th
-          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
-          
-        >
-        Descrição
-
-        </th>
-          <th
+  <div class="block w-full overflow-x-auto ">
+            <p class="px-6 align-middle border-t-0 border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-center"
+            >
+              Entradas
+            </p>
+      <table class="items-center w-full bg-transparent border-collapse">
+        <thead >
+          <tr >
+            <th
+              class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+            
+            >
+            Data
+            </th>
+            <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
             
           >
-          Tipo
+          Descrição
 
           </th>
-          <th
+            <th
+              class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+              
+            >
+            Tipo
+
+            </th>
+            <th
+              class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+            
+            >
+            Valor
+            </th>
+            <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
-           
+          
           >
-          Valor
+          Acao
           </th>
-          <th
-          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
-         
-        >
-        Acao
-        </th>
-          
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="text-center items-center" *ngFor="let data of dataEntrada">
-            <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-          >
-            {{data.data}}
-          </td>
-          <td
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-        >
-          {{data.descricao}}
-        </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              {{data.tipo}}
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              <i class="fas fa-circle text-green-500 mr-2"></i> R$ {{data.valor}}
-            </td>
-          
-            <button
-            class="caixaButton bg-blue-200 rounded-full m-1 p-2 items-center "
-          >
-          <i class="fas fa-eraser text-red-500 mr-2"></i> Apagar
-          </button>
+            
           </tr>
-      </tbody>
-    </table>
-  </div>
-
-    <div class="block w-full overflow-x-auto mt-10 ">
-<!-- saida table -->
-
-    <p class="px-6 align-middle border-t-0 border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-center"
-    >
-    Saídas
-
-    </p>
-    <table class="items-center w-full bg-transparent border-collapse ">
-    <thead>
-      <tr>
-        <th
-          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
-         
-        >
-        Data
-        </th>
-        <th
-        class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
-       
-      >
-      Descrição
-      </th>
-        <th
-          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
-         
-        >
-        Tipo
-
-        </th>
-        <th
-          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
-         
-        >
-        Valor
-        </th>
-        <th
-        class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
-       
-      >
-      Acao
-      </th>
-        
-      </tr>
-    </thead>
-    <tbody>
-        
-          <tr class="text-center items-center" *ngFor="let data of dataSaida">
-            <td
+        </thead>
+        <tbody>
+          <tr class="text-center items-center" *ngFor="let data of dataEntrada">
+              <td
               class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
             >
               {{data.data}}
@@ -174,27 +95,108 @@
           >
             {{data.descricao}}
           </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              {{data.tipo}}
-            </td>
-            <td
-              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-            >
-              <i class="fas fa-circle text-red-500 mr-2"></i> R$ {{data.valor}}
-            </td>
-          
-            <button
+              <td
+                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+              >
+                {{data.tipo}}
+              </td>
+              <td
+                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+              >
+                <i class="fas fa-circle text-green-500 mr-2"></i> R$ {{data.valor}}
+              </td>
+            
+              <button
               class="caixaButton bg-blue-200 rounded-full m-1 p-2 items-center "
             >
             <i class="fas fa-eraser text-red-500 mr-2"></i> Apagar
             </button>
-          </tr>
-   
-    
-    </tbody>
-  </table>
-
+            </tr>
+        </tbody>
+      </table>
     </div>
+
+      <div class="block w-full overflow-x-auto mt-10 ">
+  <!-- saida table -->
+
+      <p class="px-6 align-middle border-t-0 border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-center"
+      >
+      Saídas
+
+      </p>
+      <table class="items-center w-full bg-transparent border-collapse ">
+      <thead>
+        <tr>
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+          
+          >
+          Data
+          </th>
+          <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+        
+        >
+        Descrição
+        </th>
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+          
+          >
+          Tipo
+
+          </th>
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+          
+          >
+          Valor
+          </th>
+          <th
+          class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-center"
+        
+        >
+        Acao
+        </th>
+          
+        </tr>
+      </thead>
+      <tbody>
+          
+            <tr class="text-center items-center" *ngFor="let data of dataSaida">
+              <td
+                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+              >
+                {{data.data}}
+              </td>
+              <td
+              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+            >
+              {{data.descricao}}
+            </td>
+              <td
+                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+              >
+                {{data.tipo}}
+              </td>
+              <td
+                class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+              >
+                <i class="fas fa-circle text-red-500 mr-2"></i> R$ {{data.valor}}
+              </td>
+              <td
+              class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+            >
+              <i class="fas fa-circle text-red-500 mr-2"></i> R$ {{data.valor}}
+            </td>
+              <button type="button" class="flex items-center text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-3 py-1.5 text-center mr-2 mb-2">Apagar</button>
+
+            </tr>
+    
+      
+      </tbody>
+    </table>
+
+  </div>
+</div>
 

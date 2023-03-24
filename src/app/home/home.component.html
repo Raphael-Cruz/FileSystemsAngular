@@ -1,35 +1,49 @@
-<div class="w-full h-screen">
-    <app-dashboard>  </app-dashboard>
-    <div class="bg-gray-300 relative md:ml-64">
-        <app-dash-header></app-dash-header>
-        <div class="relative w-full h-screen ">
-           
-            <app-consultar-conta-receber></app-consultar-conta-receber>
+<app-dashboard>  </app-dashboard>
 
-
+  <main class="h-screen">
+    <div class="p-2  pb-0 sm:ml-64">
+    <app-dash-header></app-dash-header>
+    
+   
+      <div class="flex-auto homebox items-center justify-center text-center p-2 my-5 rounded bg-gray-300">
        
-         </div>
-        <div class="relative ">
-           <!-- <app-footer></app-footer> -->
-        </div>
-    </div>
+        <app-consultar-conta-receber></app-consultar-conta-receber>
+      
+   
+    
+      </div>
+      
 
-</div>
+      <app-footer></app-footer>
+    </div>
+  </main>
+
 
 
   
 <!--
-      
-    Caixa Dastro
-      <app-caixa></app-caixa> 
-      <app-entidade></app-entidade>
-      <app-saida></app-saida>
    
-    Caixa Relatorio
-      <app-relatorio></app-relatorio>
-      <app-relatorio-dia></app-relatorio-dia>
+    
+    
+    
+ <div class="w-full h-24 my-4">
+      
+    </div>
+  </div>
 
-      Vendas (CSS TABLE FIXED)
+
+
+    Caixa 
+      cadastro
+      <app-caixa></app-caixa> ***********TO FIX TABLE CSS
+      <app-entidade></app-entidade> ***********TO FIX TABLE CSS
+      <app-saida></app-saida> ***********TO FIX TABLE CSS
+   
+      relatorio
+      <app-relatorio></app-relatorio> ***********TO FIX TABLE CSS
+      <app-relatorio-dia></app-relatorio-dia> ***********TO FIX TABLE CSS
+
+    Vendas (CSS TABLE FIXED)
         vendas/cadastro
       <app-produto></app-produto>
       <app-situacao-proposta></app-situacao-proposta>
@@ -49,9 +63,9 @@
      <app-tipos-conta></app-tipos-conta>
 
         consulta
-    
-            <app-consultar-conta-pagar></app-consultar-conta-pagar>
-    
+      <app-consultar-conta-pagar></app-consultar-conta-pagar>
+      <app-consultar-conta-receber></app-consultar-conta-receber>
+
 
 
 

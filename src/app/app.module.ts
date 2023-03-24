@@ -14,20 +14,12 @@ import { HomeComponent } from './home/home.component';
 
 
 
-
-
-
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     BodyComponent,
-    HomeComponent
+    HomeComponent,
  
   ],
   imports: [
